@@ -1,0 +1,14 @@
+# tests
+
+.vscode
+coverage
+node_modules
+test
+circle.yml
+typings
+docs
+src
+karma.*
+karmaConfigurator.js
+mocha.opts
+.esdoc.json

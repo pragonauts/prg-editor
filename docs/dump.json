@@ -1,0 +1,4785 @@
+[
+  {
+    "__docId__": 0,
+    "kind": "file",
+    "name": "src/AjaxResource.js",
+    "content": "",
+    "static": true,
+    "longname": "src/AjaxResource.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "class",
+    "name": "AjaxResource",
+    "memberof": "src/AjaxResource.js",
+    "static": true,
+    "longname": "src/AjaxResource.js~AjaxResource",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/AjaxResource.js",
+    "importStyle": "AjaxResource",
+    "description": "Rest API Resource data fetcher\n\n- enables crossdomain requrests\n- enables CORS credentials (sends cookies)\n- uses classic `GET/PUT/POST/DELETE` endpoints",
+    "lineNumber": 17,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#constructor",
+    "access": null,
+    "description": "Creates an instance of AjaxResource.",
+    "lineNumber": 28,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "apiUrl",
+        "description": "resource url"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "ajaxOptions",
+        "description": "options passed to $.ajax"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "$.ajax",
+        "defaultRaw": "$.ajax",
+        "name": "requestor",
+        "description": "alternative to $.ajax"
+      }
+    ]
+  },
+  {
+    "__docId__": 3,
+    "kind": "member",
+    "name": "apiUrl",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#apiUrl",
+    "access": null,
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "member",
+    "name": "mapGetOutput",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#mapGetOutput",
+    "access": null,
+    "description": "Map response data after `GET/PUT /resource/:id` & `POST /resource`",
+    "lineNumber": 36,
+    "unknown": [
+      {
+        "tagName": "@prop",
+        "tagValue": "{function}"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "member",
+    "name": "mapGetAllOutput",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#mapGetAllOutput",
+    "access": null,
+    "description": "Map response data after `GET /resource`",
+    "lineNumber": 42,
+    "unknown": [
+      {
+        "tagName": "@prop",
+        "tagValue": "{function}"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "member",
+    "name": "mapInput",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#mapInput",
+    "access": null,
+    "description": "Map body data before `PUT /resource/:id` and `POST /resource`",
+    "lineNumber": 48,
+    "unknown": [
+      {
+        "tagName": "@prop",
+        "tagValue": "{function}"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "member",
+    "name": "mapParams",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#mapParams",
+    "access": null,
+    "description": "Map query params called before `GET /resource`",
+    "lineNumber": 54,
+    "unknown": [
+      {
+        "tagName": "@prop",
+        "tagValue": "{function}"
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "member",
+    "name": "_loadedDataId",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_loadedDataId",
+    "access": null,
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 9,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 59,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "member",
+    "name": "_isAbortable",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_isAbortable",
+    "access": null,
+    "description": null,
+    "lineNumber": 60,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "member",
+    "name": "_requestor",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_requestor",
+    "access": null,
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 12,
+    "kind": "member",
+    "name": "_ajaxOptions",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_ajaxOptions",
+    "access": null,
+    "description": null,
+    "lineNumber": 65,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"crossDomain\": boolean, \"xhrFields\": *, \"dataType\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "method",
+    "name": "_request",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_request",
+    "access": null,
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 14,
+    "kind": "member",
+    "name": "_isAbortable",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_isAbortable",
+    "access": null,
+    "description": null,
+    "lineNumber": 84,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 15,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 85,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 16,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 90,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 17,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 94,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 18,
+    "kind": "method",
+    "name": "_updateRequest",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_updateRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 101,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "formData",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "method",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "id",
+        "optional": true,
+        "types": [
+          "*"
+        ],
+        "defaultRaw": "undefined",
+        "defaultValue": "undefined"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 19,
+    "kind": "method",
+    "name": "getAll",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#getAll",
+    "access": null,
+    "description": "Fetch all data",
+    "lineNumber": 121,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<{ data: [], offset: number, nextOffset: mumber }>}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "params",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<{ data: [], offset: number, nextOffset: mumber }>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 20,
+    "kind": "method",
+    "name": "getById",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#getById",
+    "access": null,
+    "description": "Get Single Element Data",
+    "lineNumber": 136,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<Object>}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 21,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#create",
+    "access": null,
+    "description": "Send data to server",
+    "lineNumber": 151,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<Object>}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formData",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 22,
+    "kind": "method",
+    "name": "update",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#update",
+    "access": null,
+    "description": "Update data on server",
+    "lineNumber": 164,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<Object>}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formData",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 23,
+    "kind": "method",
+    "name": "remove",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#remove",
+    "access": null,
+    "description": "Remove data by id",
+    "lineNumber": 176,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 24,
+    "kind": "method",
+    "name": "getId",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#getId",
+    "access": null,
+    "description": "Returns identifier of the object",
+    "lineNumber": 191,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{string}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "data",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "string"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 25,
+    "kind": "method",
+    "name": "abort",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#abort",
+    "access": null,
+    "description": "Cancels current request",
+    "lineNumber": 201,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 26,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 204,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 27,
+    "kind": "file",
+    "name": "src/TableBuilder.js",
+    "content": "",
+    "static": true,
+    "longname": "src/TableBuilder.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 28,
+    "kind": "class",
+    "name": "TableBuilder",
+    "memberof": "src/TableBuilder.js",
+    "static": true,
+    "longname": "src/TableBuilder.js~TableBuilder",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/TableBuilder.js",
+    "importStyle": "TableBuilder",
+    "description": "Table columns configurator",
+    "lineNumber": 13,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "TableBuilder"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 29,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#constructor",
+    "access": null,
+    "description": "Creates an instance of TableBuilder.",
+    "lineNumber": 20,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function(text: string) => string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "translator",
+        "description": ""
+      }
+    ]
+  },
+  {
+    "__docId__": 30,
+    "kind": "member",
+    "name": "cols",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#cols",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 31,
+    "kind": "member",
+    "name": "translator",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#translator",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 32,
+    "kind": "method",
+    "name": "addText",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#addText",
+    "access": null,
+    "description": "Adds text column to table",
+    "examples": [
+      "tableBuilder.addText('name', t('Name'))\n     .orderBy()\n     .orderByDefault();"
+    ],
+    "lineNumber": 39,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{TextCellConfigurator}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "TableBuilder"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "attr",
+        "description": "attribute name"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "column name"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "TextCellConfigurator"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 33,
+    "kind": "method",
+    "name": "addAction",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#addAction",
+    "access": null,
+    "description": "Adds action column to table",
+    "examples": [
+      "tableBuilder.addAction('id', t('Remove'))\n     .onClick((e, data) => this.tableEditor.delete(data))\n     .condition((id, data) => acl.isAllowed('users.remove') && data.isAdministrable);"
+    ],
+    "lineNumber": 58,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{ActionCellConfigurator}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "TableBuilder"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "attr",
+        "description": "attribute name"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "column name"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "ActionCellConfigurator"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 34,
+    "kind": "method",
+    "name": "getColsConfig",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#getColsConfig",
+    "access": null,
+    "description": "Returns the column configuration for {TableEditor}",
+    "lineNumber": 71,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Object}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "TableBuilder"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Object"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 35,
+    "kind": "file",
+    "name": "src/cells/ActionCellConfigurator.js",
+    "content": "",
+    "static": true,
+    "longname": "src/cells/ActionCellConfigurator.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 36,
+    "kind": "class",
+    "name": "ActionCellConfigurator",
+    "memberof": "src/cells/ActionCellConfigurator.js",
+    "static": true,
+    "longname": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/cells/ActionCellConfigurator.js",
+    "importStyle": "ActionCellConfigurator",
+    "description": "Inserts Action Cell into the table",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "ActionCellConfigurator"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "BaseCellConfigurator"
+    ]
+  },
+  {
+    "__docId__": 37,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "attr",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "translator",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 38,
+    "kind": "method",
+    "name": "condition",
+    "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator#condition",
+    "access": null,
+    "description": "Condition, which shows the action or not",
+    "lineNumber": 39,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{this}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "ActionCellConfigurator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "`(value, data) => true || false`"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "method",
+    "name": "href",
+    "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator#href",
+    "access": null,
+    "description": "Sets the url of action",
+    "lineNumber": 52,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{this}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "ActionCellConfigurator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "`(value, data) => 'string'`"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 40,
+    "kind": "method",
+    "name": "label",
+    "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator#label",
+    "access": null,
+    "description": "Sets text label of action",
+    "lineNumber": 65,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{this}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "ActionCellConfigurator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callbackOrString",
+        "description": "`(value, data) => 'string'`"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 41,
+    "kind": "method",
+    "name": "onClick",
+    "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator#onClick",
+    "access": null,
+    "description": "Will be called, when user clicks on the action",
+    "lineNumber": 82,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{this}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "ActionCellConfigurator"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Function"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "callback",
+        "description": "`(id, data) => {}`"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "this"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 42,
+    "kind": "file",
+    "name": "src/cells/BaseCellConfigurator.js",
+    "content": "",
+    "static": true,
+    "longname": "src/cells/BaseCellConfigurator.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 43,
+    "kind": "class",
+    "name": "BaseCellConfigurator",
+    "memberof": "src/cells/BaseCellConfigurator.js",
+    "static": true,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/cells/BaseCellConfigurator.js",
+    "importStyle": "BaseCellConfigurator",
+    "description": "Common interface of {TableBuilder} cell configurator",
+    "lineNumber": 10,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "BaseCellConfigurator"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 44,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator#constructor",
+    "access": null,
+    "description": "Creates an instance of BaseCellConfigurator.",
+    "lineNumber": 19,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "attr",
+        "description": "Object attribute key"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "Column name"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "function(text: string): string"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "null",
+        "defaultRaw": null,
+        "name": "translator",
+        "description": "Text translator"
+      }
+    ]
+  },
+  {
+    "__docId__": 45,
+    "kind": "member",
+    "name": "translator",
+    "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "static": false,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator#translator",
+    "access": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "member",
+    "name": "config",
+    "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "static": false,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator#config",
+    "access": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"attr\": *, \"name\": *, \"map\": *, \"Cell\": *, \"order\": *, \"orderBy\": *, \"orderByDefault\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 47,
+    "kind": "method",
+    "name": "map",
+    "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator#map",
+    "access": null,
+    "description": "Set Filter function for column",
+    "lineNumber": 39,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{BaseCellConfigurator} this"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "function (value: string, data: object): any"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "fn",
+        "description": "Preprocessor function"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "BaseCellConfigurator"
+      ],
+      "spread": false,
+      "description": "this"
+    }
+  },
+  {
+    "__docId__": 48,
+    "kind": "method",
+    "name": "orderBy",
+    "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator#orderBy",
+    "access": null,
+    "description": "Set field to order by",
+    "lineNumber": 51,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{BaseCellConfigurator} this"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "0",
+        "defaultRaw": 0,
+        "name": "defaultDirection",
+        "description": "-1=desc, 1=asc, 0=without direction"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": true,
+        "name": "fieldName",
+        "description": "override name of field which will be sent to API"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "BaseCellConfigurator"
+      ],
+      "spread": false,
+      "description": "this"
+    }
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "name": "orderByDefault",
+    "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator#orderByDefault",
+    "access": null,
+    "description": "Use this field as default orderer",
+    "lineNumber": 62,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{BaseCellConfigurator} this"
+      }
+    ],
+    "params": [],
+    "return": {
+      "nullable": null,
+      "types": [
+        "BaseCellConfigurator"
+      ],
+      "spread": false,
+      "description": "this"
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "file",
+    "name": "src/cells/TextCellConfigurator.js",
+    "content": "",
+    "static": true,
+    "longname": "src/cells/TextCellConfigurator.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 51,
+    "kind": "class",
+    "name": "TextCellConfigurator",
+    "memberof": "src/cells/TextCellConfigurator.js",
+    "static": true,
+    "longname": "src/cells/TextCellConfigurator.js~TextCellConfigurator",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/cells/TextCellConfigurator.js",
+    "importStyle": "TextCellConfigurator",
+    "description": "Just a Text Cell",
+    "lineNumber": 15,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "TextCellConfigurator"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "BaseCellConfigurator"
+    ]
+  },
+  {
+    "__docId__": 52,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/cells/TextCellConfigurator.js~TextCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/TextCellConfigurator.js~TextCellConfigurator#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 17,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "attr",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "translator",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 53,
+    "kind": "file",
+    "name": "src/components/AjaxErrorMessage.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/AjaxErrorMessage.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 54,
+    "kind": "class",
+    "name": "AjaxErrorMessage",
+    "memberof": "src/components/AjaxErrorMessage.jsx",
+    "static": true,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/AjaxErrorMessage.jsx",
+    "importStyle": "AjaxErrorMessage",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 55,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"error\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "method",
+    "name": "onTryAgain",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#onTryAgain",
+    "access": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "showError",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#showError",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "jqXHR",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 59,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "file",
+    "name": "src/components/DeleteConfirmator.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/DeleteConfirmator.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 61,
+    "kind": "class",
+    "name": "DeleteConfirmator",
+    "memberof": "src/components/DeleteConfirmator.jsx",
+    "static": true,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/DeleteConfirmator.jsx",
+    "importStyle": "DeleteConfirmator",
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 62,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 12,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 63,
+    "kind": "member",
+    "name": "serverRequest",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 18,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"loading\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "member",
+    "name": "mounted",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#mounted",
+    "access": null,
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 69,
+    "kind": "method",
+    "name": "componentWillUnmount",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#componentWillUnmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 70,
+    "kind": "member",
+    "name": "mounted",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#mounted",
+    "access": null,
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 71,
+    "kind": "method",
+    "name": "onAjaxError",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#onAjaxError",
+    "access": null,
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 72,
+    "kind": "member",
+    "name": "serverRequest",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 73,
+    "kind": "method",
+    "name": "onAjaxSuccess",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#onAjaxSuccess",
+    "access": null,
+    "description": null,
+    "lineNumber": 54,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 74,
+    "kind": "member",
+    "name": "serverRequest",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 58,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 75,
+    "kind": "method",
+    "name": "onConfirm",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#onConfirm",
+    "access": null,
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 76,
+    "kind": "method",
+    "name": "renderError",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#renderError",
+    "access": null,
+    "description": null,
+    "lineNumber": 74,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 77,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 76,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 78,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 82,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 79,
+    "kind": "file",
+    "name": "src/components/Editor.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/Editor.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 80,
+    "kind": "class",
+    "name": "Editor",
+    "memberof": "src/components/Editor.jsx",
+    "static": true,
+    "longname": "src/components/Editor.jsx~Editor",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/Editor.jsx",
+    "importStyle": "Editor",
+    "description": "Editor component\nhas theese props:\n\n- `validator` - required validator interface\n  `{ validate: (data, ctx) => Promise, validateProp: (name, value, ctx, data) => Promise }`\n- `updateErrorMessage` - default error message, when update fails\n- `loadingErrorMessage` - default error message, when loading fails\n\nNot required, when running inside the {TableEditor}\n\n- `id` - identifier of item to edit\n- `data` - data to edit (if provided, data are not loaded from resource)\n- `resource` - API url or {AjaxResource} interface\n- `t` - translator function\n- `modalTitle` - boolean or string, which shows editor as Modal\n- `onSubmitDidFinish` - success callback after submit\n- `onSubmitDidFail` - error callback after submit",
+    "lineNumber": 35,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "Editor"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "React.Component"
+    ]
+  },
+  {
+    "__docId__": 81,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 37,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "context",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 82,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 40,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 83,
+    "kind": "member",
+    "name": "t",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#t",
+    "access": null,
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 84,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 85,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 48,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 86,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 54,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"id\": *, \"loadedData\": *, \"loading\": *, \"values\": *, \"loadingError\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 87,
+    "kind": "method",
+    "name": "componentWillMount",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#componentWillMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 63,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 88,
+    "kind": "method",
+    "name": "componentWillUnmount",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#componentWillUnmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 89,
+    "kind": "method",
+    "name": "onDataLoad",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onDataLoad",
+    "access": null,
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 90,
+    "kind": "method",
+    "name": "onDataLoadError",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onDataLoadError",
+    "access": null,
+    "description": null,
+    "lineNumber": 83,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "e",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 91,
+    "kind": "method",
+    "name": "onSubmit",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onSubmit",
+    "access": null,
+    "description": null,
+    "lineNumber": 90,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "formData",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 92,
+    "kind": "method",
+    "name": "onValidationFailed",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onValidationFailed",
+    "access": null,
+    "description": null,
+    "lineNumber": 103,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 93,
+    "kind": "method",
+    "name": "onBeforeValidate",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onBeforeValidate",
+    "access": null,
+    "description": null,
+    "lineNumber": 107,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "formData",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 94,
+    "kind": "method",
+    "name": "onAjaxError",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onAjaxError",
+    "access": null,
+    "description": null,
+    "lineNumber": 111,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 95,
+    "kind": "method",
+    "name": "onAjaxSuccess",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onAjaxSuccess",
+    "access": null,
+    "description": null,
+    "lineNumber": 122,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 96,
+    "kind": "member",
+    "name": "serverRequest",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 123,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "method",
+    "name": "onClosed",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#onClosed",
+    "access": null,
+    "description": null,
+    "lineNumber": 143,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "getContext",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#getContext",
+    "access": null,
+    "description": null,
+    "lineNumber": 153,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
+    "kind": "method",
+    "name": "loadData",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#loadData",
+    "access": null,
+    "description": null,
+    "lineNumber": 161,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "initial",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "__docId__": 100,
+    "kind": "method",
+    "name": "renderError",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#renderError",
+    "access": null,
+    "description": null,
+    "lineNumber": 170,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 101,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 172,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 102,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 178,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 103,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/Editor.jsx~Editor",
+    "static": false,
+    "longname": "src/components/Editor.jsx~Editor#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 184,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 104,
+    "kind": "file",
+    "name": "src/components/ErrorMessage.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/ErrorMessage.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 105,
+    "kind": "class",
+    "name": "ErrorMessage",
+    "memberof": "src/components/ErrorMessage.jsx",
+    "static": true,
+    "longname": "src/components/ErrorMessage.jsx~ErrorMessage",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/ErrorMessage.jsx",
+    "importStyle": "ErrorMessage",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "onCloseRequested",
+    "memberof": "src/components/ErrorMessage.jsx~ErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/ErrorMessage.jsx~ErrorMessage#onCloseRequested",
+    "access": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/ErrorMessage.jsx~ErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/ErrorMessage.jsx~ErrorMessage#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 108,
+    "kind": "file",
+    "name": "src/components/Modal.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/Modal.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 109,
+    "kind": "function",
+    "name": "Modal",
+    "memberof": "src/components/Modal.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/Modal.jsx~Modal",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/Modal.jsx",
+    "importStyle": "Modal",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"onClosed\": *, \"children\": *, \"title\": *, \"footer\": *, \"customBody\": *}"
+        ],
+        "defaultRaw": {
+          "onClosed": null,
+          "children": null,
+          "title": null,
+          "footer": null,
+          "customBody": null
+        },
+        "defaultValue": "{\"onClosed\":null,\"children\":null,\"title\":null,\"footer\":null,\"customBody\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 110,
+    "kind": "file",
+    "name": "src/components/Paginator.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/Paginator.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 111,
+    "kind": "function",
+    "name": "Paginator",
+    "memberof": "src/components/Paginator.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/Paginator.jsx~Paginator",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/Paginator.jsx",
+    "importStyle": "Paginator",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 112,
+    "kind": "file",
+    "name": "src/components/Row.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/Row.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 113,
+    "kind": "function",
+    "name": "Row",
+    "memberof": "src/components/Row.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/Row.jsx~Row",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/Row.jsx",
+    "importStyle": "Row",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 114,
+    "kind": "file",
+    "name": "src/components/Spinner.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/Spinner.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 115,
+    "kind": "variable",
+    "name": "loading",
+    "memberof": "src/components/Spinner.jsx",
+    "static": true,
+    "longname": "src/components/Spinner.jsx~loading",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/Spinner.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 116,
+    "kind": "variable",
+    "name": "styleSheet",
+    "memberof": "src/components/Spinner.jsx",
+    "static": true,
+    "longname": "src/components/Spinner.jsx~styleSheet",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/Spinner.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 117,
+    "kind": "variable",
+    "name": "styles",
+    "memberof": "src/components/Spinner.jsx",
+    "static": true,
+    "longname": "src/components/Spinner.jsx~styles",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/Spinner.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"loaderContainer\": *, \"loading\": *, \"loadingBar\": *, \"n1\": *, \"n2\": *, \"n3\": *, \"n4\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 118,
+    "kind": "function",
+    "name": "Spinner",
+    "memberof": "src/components/Spinner.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/Spinner.jsx~Spinner",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/Spinner.jsx",
+    "importStyle": "Spinner",
+    "description": null,
+    "lineNumber": 55,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 119,
+    "kind": "file",
+    "name": "src/components/Table.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/Table.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 120,
+    "kind": "function",
+    "name": "renderArrow",
+    "memberof": "src/components/Table.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/Table.jsx~renderArrow",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/Table.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "order",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 121,
+    "kind": "class",
+    "name": "Table",
+    "memberof": "src/components/Table.jsx",
+    "static": true,
+    "longname": "src/components/Table.jsx~Table",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/Table.jsx",
+    "importStyle": "Table",
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~React.Component"
+    ]
+  },
+  {
+    "__docId__": 122,
+    "kind": "method",
+    "name": "orderBy",
+    "memberof": "src/components/Table.jsx~Table",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Table.jsx~Table#orderBy",
+    "access": null,
+    "description": null,
+    "lineNumber": 23,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "columnAttr",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "order",
+        "optional": true,
+        "types": [
+          "number"
+        ],
+        "defaultRaw": 0,
+        "defaultValue": "0"
+      }
+    ]
+  },
+  {
+    "__docId__": 123,
+    "kind": "method",
+    "name": "renderHeaderColumn",
+    "memberof": "src/components/Table.jsx~Table",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Table.jsx~Table#renderHeaderColumn",
+    "access": null,
+    "description": "Renders column of table header",
+    "lineNumber": 47,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "config",
+        "description": ""
+      },
+      {
+        "nullable": null,
+        "types": [
+          "number"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "index",
+        "description": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 124,
+    "kind": "method",
+    "name": "renderHeader",
+    "memberof": "src/components/Table.jsx~Table",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Table.jsx~Table#renderHeader",
+    "access": null,
+    "description": null,
+    "lineNumber": 75,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 125,
+    "kind": "method",
+    "name": "renderBody",
+    "memberof": "src/components/Table.jsx~Table",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Table.jsx~Table#renderBody",
+    "access": null,
+    "description": null,
+    "lineNumber": 80,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 126,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/Table.jsx~Table",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/Table.jsx~Table#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 99,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 127,
+    "kind": "file",
+    "name": "src/components/TableEditor.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/TableEditor.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 128,
+    "kind": "class",
+    "name": "TableEditor",
+    "memberof": "src/components/TableEditor.jsx",
+    "static": true,
+    "longname": "src/components/TableEditor.jsx~TableEditor",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/TableEditor.jsx",
+    "importStyle": "TableEditor",
+    "description": "Main datagrid component\nAccepts theese props:\n\n- `colsConfig` - output from {TableBuilder} to show in table\n- `resource` - url of resource or {AjaxResource} interface, which loads the data\n- `t` - translator function (`word => word`)\n- `loadingErrorMessage` - string to show when loading fails\n- `deleteErrorMessage` - string to show in delete confirmation alert\n- `limit` - required number of entries\n- `disableAdd` - boolean which determins to show an add button",
+    "examples": [
+      "<TableEditor\n    colsConfig={tableBuilder.getColsConfig()}\n    resource=\"/api/models/:id?someQuery=1\"\n>\n    <Editor\n        validator={validator}\n        context={{\n            create: validator.CONTEXT_CREATE,\n            update: validator.CONTEXT_UPDATE\n        }}\n    >\n        <Input name=\"text\" />\n    </Editor>\n</TableEditor>\n\n// or with filter form at the header\n<TableEditor\n    colsConfig={tableBuilder.getColsConfig()}\n    resource=\"/api/models/:id?someQuery=1\"\n>\n    <header>\n        <Input\n            name=\"search\"\n            placeholder=\"Search\"\n            controlClass=\"is-expanded\"\n            iconBefore={<i className=\"fa fa-search\" aria-hidden=\"true\" />}\n        />\n    </header>\n    <Editor\n        validator={validator}\n    >\n        <Input name=\"text\" />\n    </Editor>\n</TableEditor>"
+    ],
+    "lineNumber": 64,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "TableEditor"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "Component"
+    ]
+  },
+  {
+    "__docId__": 129,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 130,
+    "kind": "member",
+    "name": "serverRequest",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 69,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 131,
+    "kind": "member",
+    "name": "headerForm",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#headerForm",
+    "access": null,
+    "description": null,
+    "lineNumber": 71,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 132,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 73,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 133,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 75,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"editorOpened\": *, \"confirmingRemove\": *, \"loading\": boolean, \"data\": *, \"params\": *, \"nextOffset\": *, \"editData\": *, \"editId\": *, \"deleteId\": *, \"filterChanged\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 134,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 107,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 135,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 109,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 136,
+    "kind": "method",
+    "name": "getChildContext",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#getChildContext",
+    "access": null,
+    "description": null,
+    "lineNumber": 119,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "{\"resource\": *, \"onEditorDidFinish\": *, \"editId\": *, \"editData\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 137,
+    "kind": "method",
+    "name": "componentDidMount",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#componentDidMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 128,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 138,
+    "kind": "method",
+    "name": "componentWillUnmount",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#componentWillUnmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 132,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 139,
+    "kind": "method",
+    "name": "onAjaxError",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onAjaxError",
+    "access": null,
+    "description": null,
+    "lineNumber": 136,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "error",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 140,
+    "kind": "method",
+    "name": "onAjaxSuccess",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onAjaxSuccess",
+    "access": null,
+    "description": null,
+    "lineNumber": 146,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 141,
+    "kind": "method",
+    "name": "onAddButtonClick",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onAddButtonClick",
+    "access": null,
+    "description": null,
+    "lineNumber": 159,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 142,
+    "kind": "method",
+    "name": "onEditorDidFinish",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onEditorDidFinish",
+    "access": null,
+    "description": null,
+    "lineNumber": 163,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 143,
+    "kind": "method",
+    "name": "onDeleteConfirmationFinished",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onDeleteConfirmationFinished",
+    "access": null,
+    "description": null,
+    "lineNumber": 170,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "data",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 144,
+    "kind": "method",
+    "name": "onDeleteConfirmationClosed",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onDeleteConfirmationClosed",
+    "access": null,
+    "description": null,
+    "lineNumber": 177,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 145,
+    "kind": "method",
+    "name": "onHeaderSubmit",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#onHeaderSubmit",
+    "access": null,
+    "description": null,
+    "lineNumber": 181,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 146,
+    "kind": "method",
+    "name": "loadData",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#loadData",
+    "access": null,
+    "description": null,
+    "lineNumber": 186,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "params",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      },
+      {
+        "name": "initial",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      },
+      {
+        "name": "overrideParams",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "__docId__": 147,
+    "kind": "method",
+    "name": "resetHeaderForm",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#resetHeaderForm",
+    "access": null,
+    "description": null,
+    "lineNumber": 209,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 148,
+    "kind": "method",
+    "name": "edit",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#edit",
+    "access": null,
+    "description": "Open editor with given item",
+    "lineNumber": 222,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "TableEditor"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "idOrData",
+        "description": "identifier or object"
+      }
+    ]
+  },
+  {
+    "__docId__": 149,
+    "kind": "method",
+    "name": "delete",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#delete",
+    "access": null,
+    "description": "Open delete confirmation dialog",
+    "lineNumber": 243,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "TableEditor"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "idOrData",
+        "description": "identifier or object"
+      }
+    ]
+  },
+  {
+    "__docId__": 150,
+    "kind": "method",
+    "name": "renderEditor",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderEditor",
+    "access": null,
+    "description": null,
+    "lineNumber": 248,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 151,
+    "kind": "method",
+    "name": "renderRemovalConfirmation",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderRemovalConfirmation",
+    "access": null,
+    "description": null,
+    "lineNumber": 252,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 152,
+    "kind": "method",
+    "name": "renderError",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderError",
+    "access": null,
+    "description": null,
+    "lineNumber": 262,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 153,
+    "kind": "member",
+    "name": "errorHandler",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
+    "access": null,
+    "description": null,
+    "lineNumber": 265,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 154,
+    "kind": "method",
+    "name": "renderPaginator",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderPaginator",
+    "access": null,
+    "description": null,
+    "lineNumber": 273,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 155,
+    "kind": "method",
+    "name": "renderTable",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderTable",
+    "access": null,
+    "description": null,
+    "lineNumber": 284,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 156,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 311,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 157,
+    "kind": "file",
+    "name": "src/components/TableEditorHeader.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/TableEditorHeader.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 158,
+    "kind": "function",
+    "name": "isEditor",
+    "memberof": "src/components/TableEditorHeader.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/TableEditorHeader.jsx~isEditor",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "child",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
+    "kind": "function",
+    "name": "hasForm",
+    "memberof": "src/components/TableEditorHeader.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/TableEditorHeader.jsx~hasForm",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "children",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    }
+  },
+  {
+    "__docId__": 160,
+    "kind": "function",
+    "name": "getFormChildren",
+    "memberof": "src/components/TableEditorHeader.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/TableEditorHeader.jsx~getFormChildren",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
+    "importStyle": "{getFormChildren}",
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "children",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 161,
+    "kind": "function",
+    "name": "getHeaderChildren",
+    "memberof": "src/components/TableEditorHeader.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/TableEditorHeader.jsx~getHeaderChildren",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 44,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "children",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 162,
+    "kind": "function",
+    "name": "TableEditorHeader",
+    "memberof": "src/components/TableEditorHeader.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/TableEditorHeader.jsx~TableEditorHeader",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
+    "importStyle": "{TableEditorHeader}",
+    "description": null,
+    "lineNumber": 60,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"disableAdd\": *, \"children\": *, \"onAddButtonClick\": *, \"onResetHeaderForm\": *, \"onHeaderSubmit\": *, \"t\": *, \"filterChanged\": *, \"params\": *}"
+        ],
+        "defaultRaw": {
+          "disableAdd": null,
+          "children": null,
+          "onAddButtonClick": null,
+          "onResetHeaderForm": null,
+          "onHeaderSubmit": null,
+          "t": null,
+          "filterChanged": null,
+          "params": null
+        },
+        "defaultValue": "{\"disableAdd\":null,\"children\":null,\"onAddButtonClick\":null,\"onResetHeaderForm\":null,\"onHeaderSubmit\":null,\"t\":null,\"filterChanged\":null,\"params\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 163,
+    "kind": "file",
+    "name": "src/components/cells/ActionCell.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/cells/ActionCell.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 164,
+    "kind": "variable",
+    "name": "EMPTY_HREF",
+    "memberof": "src/components/cells/ActionCell.jsx",
+    "static": true,
+    "longname": "src/components/cells/ActionCell.jsx~EMPTY_HREF",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/components/cells/ActionCell.jsx",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 165,
+    "kind": "function",
+    "name": "ActionCell",
+    "memberof": "src/components/cells/ActionCell.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/cells/ActionCell.jsx~ActionCell",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/cells/ActionCell.jsx",
+    "importStyle": "ActionCell",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"config\": *, \"data\": *}"
+        ],
+        "defaultRaw": {
+          "config": null,
+          "data": null
+        },
+        "defaultValue": "{\"config\":null,\"data\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 166,
+    "kind": "file",
+    "name": "src/components/cells/TextCell.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/cells/TextCell.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 167,
+    "kind": "function",
+    "name": "TextCell",
+    "memberof": "src/components/cells/TextCell.jsx",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/components/cells/TextCell.jsx~TextCell",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/cells/TextCell.jsx",
+    "importStyle": "TextCell",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "objectPattern",
+        "types": [
+          "{\"config\": *, \"data\": *}"
+        ],
+        "defaultRaw": {
+          "config": null,
+          "data": null
+        },
+        "defaultValue": "{\"config\":null,\"data\":null}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 168,
+    "kind": "file",
+    "name": "src/components/tablePropTypes.js",
+    "content": "",
+    "static": true,
+    "longname": "src/components/tablePropTypes.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 169,
+    "kind": "variable",
+    "name": "ColsConfig",
+    "memberof": "src/components/tablePropTypes.js",
+    "static": true,
+    "longname": "src/components/tablePropTypes.js~ColsConfig",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/tablePropTypes.js",
+    "importStyle": "{ColsConfig}",
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 170,
+    "kind": "variable",
+    "name": "StringOrFunc",
+    "memberof": "src/components/tablePropTypes.js",
+    "static": true,
+    "longname": "src/components/tablePropTypes.js~StringOrFunc",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/tablePropTypes.js",
+    "importStyle": "{StringOrFunc}",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 171,
+    "kind": "file",
+    "name": "src/main.js",
+    "content": "",
+    "static": true,
+    "longname": "src/main.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 172,
+    "kind": "file",
+    "name": "src/resourceUrlBuilder.js",
+    "content": "",
+    "static": true,
+    "longname": "src/resourceUrlBuilder.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 173,
+    "kind": "variable",
+    "name": "ID_PLACEHOLDER",
+    "memberof": "src/resourceUrlBuilder.js",
+    "static": true,
+    "longname": "src/resourceUrlBuilder.js~ID_PLACEHOLDER",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/resourceUrlBuilder.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 5,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 174,
+    "kind": "variable",
+    "name": "LAST_SLASH",
+    "memberof": "src/resourceUrlBuilder.js",
+    "static": true,
+    "longname": "src/resourceUrlBuilder.js~LAST_SLASH",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/resourceUrlBuilder.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 6,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "undefined"
+      ]
+    }
+  },
+  {
+    "__docId__": 175,
+    "kind": "function",
+    "name": "appendQuery",
+    "memberof": "src/resourceUrlBuilder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/resourceUrlBuilder.js~appendQuery",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/resourceUrlBuilder.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "queryObject",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 176,
+    "kind": "function",
+    "name": "resourceUrl",
+    "memberof": "src/resourceUrlBuilder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/resourceUrlBuilder.js~resourceUrl",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/resourceUrlBuilder.js",
+    "importStyle": "{resourceUrl}",
+    "description": null,
+    "lineNumber": 42,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "resource",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "id",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "",
+        "defaultValue": ""
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 177,
+    "kind": "function",
+    "name": "findAll",
+    "memberof": "src/resourceUrlBuilder.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/resourceUrlBuilder.js~findAll",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/resourceUrlBuilder.js",
+    "importStyle": "{findAll}",
+    "description": null,
+    "lineNumber": 56,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "resource",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "query",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  }
+]

@@ -1,0 +1,22 @@
+
+#? ./components/AjaxErrorMessage.jsx
+Try it again: "Try it again"
+
+#? ./components/DeleteConfirmator.jsx
+Delete: "Delete"
+Delete item?: "Delete item?"
+Deletion failed.: "Deletion failed."
+Do you really want to remove the record?: "Do you really want to remove the record?"
+
+#? ./components/Editor.jsx ./components/TableEditor.jsx
+Edit item: "Edit item"
+Loading failed: "Loading failed"
+New item: "New item"
+Submit failed.: "Submit failed."
+
+#? ./components/Editor.jsx ./components/Editor.jsx
+Submit: "Submit"
+
+#? ./components/TableEditorHeader.jsx
+Add: "Add"
+Filter: "Filter"

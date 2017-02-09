@@ -1,0 +1,20 @@
+{
+    "title": "Prg Editor",
+    "source": "./src",
+    "destination": "./docs",
+    "access": ["public"],
+    "autoPrivate": true,
+    "unexportIdentifier": false,
+    "undocumentIdentifier": false,
+    "builtinExternal": false,
+    "includes": [".*\\.js", ".*\\.jsx"],
+    "index": "./README.md",
+    "package": "./package.json",
+    "coverage": false,
+    "includeSource": false,
+    "experimentalProposal": {
+        "classProperties": true,
+        "objectRestSpread": true,
+        "exportExtensions": true
+    }
+}
