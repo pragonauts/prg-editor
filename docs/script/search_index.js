@@ -24,6 +24,18 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "prg-editor/src/components/modal.jsx~modal",
+    "function/index.html#static-function-Modal",
+    "<span>Modal</span> <span class=\"search-result-import-path\">prg-editor/src/components/Modal.jsx</span>",
+    "function"
+  ],
+  [
+    "prg-editor/src/components/spinner.jsx~spinner",
+    "function/index.html#static-function-Spinner",
+    "<span>Spinner</span> <span class=\"search-result-import-path\">prg-editor/src/components/Spinner.jsx</span>",
+    "function"
+  ],
+  [
     "prg-editor/src/tablebuilder.js~tablebuilder",
     "class/src/TableBuilder.js~TableBuilder.html",
     "<span>TableBuilder</span> <span class=\"search-result-import-path\">prg-editor/src/TableBuilder.js</span>",

@@ -52,6 +52,16 @@ const styles = {
     }
 };
 
+/**
+ * Just a Loader
+ *
+ * @returns {ReactDom}
+ * @example
+ * // just as a dummy component
+ * import { Spinner } from 'prg-editor';
+ *
+ * <Spinner />
+ */
 function Spinner () {
     return (<div className="columns is-vcentered is-centered" style={styles.loaderContainer}>
         <div className="column loading has-text-centered" style={styles.loading}>

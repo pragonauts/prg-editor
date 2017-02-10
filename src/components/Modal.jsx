@@ -4,6 +4,49 @@
 
 import React, { PropTypes } from 'react';
 
+/**
+ * Simple Bulma Modal window
+ *
+ * ## PropTypes
+ *
+ * | prop | type | purpose |
+ * |------|------|---------|
+ * | `onClosed` | `function` - **required** | Called, when user presses close
+ * | `title` | `string|react` - **required** | Is shown as title
+ * | `footer` | `string|react` | Is used as footer when `customBody === false`
+ * | `customBody` | `boolean` | Enable to use own body and footer components (usefull for forms)
+ *
+ * @param {object} { onClosed, children, title, footer, customBody }
+ * @returns {ReactDom}
+ * @example
+ * import { Modal } from 'prg-editor';
+ *
+ * // basic usage
+ * <Modal
+ *     title="Alert"
+ *     onClose={() => console.log('please close me')}
+ * >
+ *      <p className="title">Something Interesting!</p>
+ * </Modal>
+ *
+ *
+ * // providing own body
+ * <Modal
+ *     title="Alert"
+ *     onClose={() => console.log('please close me')}
+ *     customBody
+ * >
+ *      <form>
+ *          <section className="modal-card-body">
+ *              <input name="input" />
+ *          </section>
+ *          <footer className="modal-card-foot">
+ *              <button>Submit</button>
+ *          </footer>
+ *      </form>
+ * </Modal>
+ *
+ */
 function Modal ({ onClosed, children, title, footer, customBody }) {
 
     let body;
