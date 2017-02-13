@@ -15,13 +15,18 @@ import { TableEditorHeader, getFormChildren } from './TableEditorHeader';
  * Main datagrid component
  * Accepts theese props:
  *
- * - `colsConfig` - output from {TableBuilder} to show in table
- * - `resource` - url of resource or {AjaxResource} interface, which loads the data
- * - `t` - translator function (`word => word`)
- * - `loadingErrorMessage` - string to show when loading fails
- * - `deleteErrorMessage` - string to show in delete confirmation alert
- * - `limit` - required number of entries
- * - `disableAdd` - boolean which determins to show an add button
+ * ## Props
+ *
+ * | prop | type | description |
+ * |------|------|-------------|
+ * | `params` | `Object` | Initial data for query |
+ * | `colsConfig` | `Object[]` - **required** | output from {TableBuilder} to show in table
+ * | `resource` | `string|AjaxResource` - **required** | url of resource or {AjaxResource}
+ * | `t` | `function` | translator function (`word => word`)
+ * | `loadingErrorMessage` | `string` | string to show when loading fails
+ * | `deleteErrorMessage` | `string` | string to show in delete confirmation alert
+ * | `limit` | `number` | required number of entries
+ * | `disableAdd` | `boolean` | which determins to show an add button
  *
  * @class TableEditor
  * @extends {Component}
@@ -126,7 +131,13 @@ class TableEditor extends Component {
     }
 
     componentDidMount () {
-        this.loadData({}, true);
+        this.loadData(this.state.params, true);
+    }
+
+    componentWillReceiveProps (props) {
+        if (this.props.params !== props.params) {
+            this.loadData(props.params);
+        }
     }
 
     componentWillUnmount () {
@@ -163,14 +174,14 @@ class TableEditor extends Component {
     onEditorDidFinish (data = null) {
         this.setState({ editorOpened: false });
         if (data !== null) {
-            this.loadData();
+            this.requestDataLoad();
         }
     }
 
     onDeleteConfirmationFinished (data) {
         this.setState({ confirmingRemove: false });
         if (data !== null) {
-            this.loadData();
+            this.requestDataLoad();
         }
     }
 
@@ -180,28 +191,36 @@ class TableEditor extends Component {
 
     onHeaderSubmit (params) {
         this.setState({ filterChanged: true });
-        this.loadData(Object.assign({}, params, { page: 0 }));
+        this.requestDataLoad(Object.assign({}, params, { page: 0 }));
     }
 
-    loadData (params = {}, initial = false, overrideParams = false) {
+    requestDataLoad (params = {}, overrideParams = false) {
         let newParams;
         if (overrideParams) {
             newParams = params;
-        } else if (initial) {
-            newParams = this.state.params;
         } else {
             newParams = Object.assign({}, this.state.params, params);
         }
+
+        if (this.props.onParamsChange !== null) {
+            this.props.onParamsChange(newParams);
+        } else {
+            this.loadData(newParams);
+        }
+    }
+
+    loadData (params = {}, initial = false) {
+
         if (!initial) {
             this.setState({
                 loading: true,
-                params: newParams,
+                params,
                 data: [],
                 nextOffset: 0
             });
         }
 
-        this.resource.getAll(newParams)
+        this.resource.getAll(params)
             .then(data => this.onAjaxSuccess(data))
             .catch(err => this.onAjaxError(err));
     }
@@ -209,7 +228,7 @@ class TableEditor extends Component {
     resetHeaderForm () {
         const { order, orderBy } = this.state.params;
         this.setState({ filterChanged: false });
-        this.loadData({ offset: 0, order, orderBy, limit: this.props.limit }, false, true);
+        this.requestDataLoad({ offset: 0, order, orderBy, limit: this.props.limit }, true);
     }
 
     /**
@@ -229,6 +248,9 @@ class TableEditor extends Component {
         } else {
             editId = idOrData;
         }
+
+
+        // @here ?
 
         this.setState({ editId, editData, editorOpened: true });
     }
@@ -266,7 +288,7 @@ class TableEditor extends Component {
             }}
             message={this.props.loadingErrorMessage}
             t={this.props.t}
-            onTryAgain={() => this.loadData()}
+            onTryAgain={() => this.requestDataLoad()}
         />);
     }
 
@@ -277,7 +299,7 @@ class TableEditor extends Component {
         return (<Paginator
             page={page}
             nextPage={this.state.nextOffset ? page + 1 : 0}
-            onPageChange={p => this.loadData({ offset: p >= 0 ? p * limit : -1 })}
+            onPageChange={p => this.requestDataLoad({ offset: p >= 0 ? p * limit : -1 })}
         />);
     }
 
@@ -302,7 +324,7 @@ class TableEditor extends Component {
                 loading={loading}
                 order={params.order}
                 orderBy={params.orderBy}
-                onOrderChange={(orderBy, order) => this.loadData({ order, orderBy })}
+                onOrderChange={(orderBy, order) => this.requestDataLoad({ order, orderBy })}
             />
             {this.renderPaginator()}
         </div>);
@@ -333,7 +355,8 @@ TableEditor.propTypes = {
     loadingErrorMessage: StringOrFunc,
     deleteErrorMessage: StringOrFunc,
     limit: PropTypes.number,
-    disableAdd: PropTypes.bool
+    disableAdd: PropTypes.bool,
+    onParamsChange: PropTypes.func
 };
 
 TableEditor.childContextTypes = {
@@ -353,7 +376,8 @@ TableEditor.defaultProps = {
     loadingErrorMessage: 'Loading failed', // i18s
     deleteErrorMessage: 'Delete failed', // i18s
     disableAdd: false,
-    limit: 20
+    limit: 20,
+    onParamsChange: null
 };
 
 export default TableEditor;

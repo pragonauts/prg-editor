@@ -549,5 +549,66 @@ describe('<TableEditor>', function () {
             });
     });
 
+    it('should delegate changes to onParamsChange prop', function () {
+        const server = sinon.fakeServer.create();
+
+        server.respondWith(
+            'GET', /^\/api\/entity/,
+            [200, { 'Content-Type': 'application/json' },
+                JSON.stringify({ data: DEFAULT_DATA })]);
+
+        const tb = new TableBuilder();
+
+        tb.addText('name', 'Name')
+            .orderBy(1)
+            .orderByDefault();
+
+        tb.addText('other', 'Other')
+            .orderBy(-1);
+
+        const onParamsChange = sinon.spy();
+
+        const app = mount(
+            <TableEditor
+                resource={RESOURCE}
+                colsConfig={tb.getColsConfig()}
+                onParamsChange={onParamsChange}
+            >
+                <header>
+                    <Input type="text" name="search" />
+                </header>
+            </TableEditor>
+        );
+
+        assert.equal(app.find('div.loading').length, 1, 'table should start in loading state');
+        assert.equal(server.requests[0].url, '/api/entity?offset=0&order=1&orderBy=name&limit=20');
+
+        server.respond();
+
+        return nextTick()
+            .then(() => {
+                const header = app.find('thead');
+
+                assert.equal(header.find('button').length, 2, 'there should be two order buttons');
+                assert(!onParamsChange.called, 'Params should not be called');
+
+                header.find('button').at(1).simulate('click');
+
+                assert.equal(app.find('div.loading').length, 0, 'table should not be in loading state');
+                assert(onParamsChange.calledOnce, 'Params should be called');
+
+                app.setProps({ params: onParamsChange.firstCall.args[0] });
+
+
+                assert.equal(app.find('div.loading').length, 1, 'table should be in loading state');
+                assert(onParamsChange.calledOnce, 'Params should be called');
+
+                assert.equal(server.requests[1].url, '/api/entity?offset=0&order=-1&orderBy=other&limit=20');
+
+                server.respond();
+                return nextTick();
+            });
+    });
+
 
 });
