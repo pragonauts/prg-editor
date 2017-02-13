@@ -27,6 +27,12 @@ import { TableEditorHeader, getFormChildren } from './TableEditorHeader';
  * | `deleteErrorMessage` | `string` | string to show in delete confirmation alert
  * | `limit` | `number` | required number of entries
  * | `disableAdd` | `boolean` | which determins to show an add button
+ * | `onParamsChange` | `function` | switches component to controlled state
+ *
+ * ## Controlled TableEditor - managing state from the outside
+ *
+ * For controlling component state you can provide `onParamsChange` prop and manually
+ * set the `params` property. So you can delegate controlling state to the React Router.
  *
  * @class TableEditor
  * @extends {Component}

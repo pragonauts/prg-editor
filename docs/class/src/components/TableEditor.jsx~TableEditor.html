@@ -46,13 +46,13 @@
 </nav>
 
 <div class="content" data-ice="content"><div class="header-notice">
-  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import TableEditor from &apos;<span><a href="file/src/components/TableEditor.jsx.html#lineNumber64">prg-editor/src/components/TableEditor.jsx</a></span>&apos;</code></pre></div>
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import TableEditor from &apos;<span><a href="file/src/components/TableEditor.jsx.html#lineNumber75">prg-editor/src/components/TableEditor.jsx</a></span>&apos;</code></pre></div>
   <span data-ice="access">public</span>
   <span data-ice="kind">class</span>
   
   
   
-  <span data-ice="source">| <span><a href="file/src/components/TableEditor.jsx.html#lineNumber64">source</a></span></span>
+  <span data-ice="source">| <span><a href="file/src/components/TableEditor.jsx.html#lineNumber75">source</a></span></span>
 </div>
 
 <div class="self-detail detail">
@@ -74,15 +74,67 @@
   
   <div class="description" data-ice="description"><p>Main datagrid component
 Accepts theese props:</p>
-<ul>
-<li><code>colsConfig</code> - output from {TableBuilder} to show in table</li>
-<li><code>resource</code> - url of resource or {AjaxResource} interface, which loads the data</li>
-<li><code>t</code> - translator function (<code>word =&gt; word</code>)</li>
-<li><code>loadingErrorMessage</code> - string to show when loading fails</li>
-<li><code>deleteErrorMessage</code> - string to show in delete confirmation alert</li>
-<li><code>limit</code> - required number of entries</li>
-<li><code>disableAdd</code> - boolean which determins to show an add button</li>
-</ul>
+<h2 id="props">Props</h2>
+<table>
+<thead>
+<tr>
+<th>prop</th>
+<th>type</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>params</code></td>
+<td><code>Object</code></td>
+<td>Initial data for query</td>
+</tr>
+<tr>
+<td><code>colsConfig</code></td>
+<td><code>Object[]</code> - <strong>required</strong></td>
+<td>output from {TableBuilder} to show in table</td>
+</tr>
+<tr>
+<td><code>resource</code></td>
+<td>`string</td>
+<td>AjaxResource` - <strong>required</strong></td>
+<td>url of resource or {AjaxResource}</td>
+</tr>
+<tr>
+<td><code>t</code></td>
+<td><code>function</code></td>
+<td>translator function (<code>word =&gt; word</code>)</td>
+</tr>
+<tr>
+<td><code>loadingErrorMessage</code></td>
+<td><code>string</code></td>
+<td>string to show when loading fails</td>
+</tr>
+<tr>
+<td><code>deleteErrorMessage</code></td>
+<td><code>string</code></td>
+<td>string to show in delete confirmation alert</td>
+</tr>
+<tr>
+<td><code>limit</code></td>
+<td><code>number</code></td>
+<td>required number of entries</td>
+</tr>
+<tr>
+<td><code>disableAdd</code></td>
+<td><code>boolean</code></td>
+<td>which determins to show an add button</td>
+</tr>
+<tr>
+<td><code>onParamsChange</code></td>
+<td><code>function</code></td>
+<td>switches component to controlled state</td>
+</tr>
+</tbody>
+</table>
+<h2 id="controlled-tableeditor-managing-state-from-the-outside">Controlled TableEditor - managing state from the outside</h2>
+<p>For controlling component state you can provide <code>onParamsChange</code> prop and manually
+set the <code>params</code> property. So you can delegate controlling state to the React Router.</p>
 </div>
   
 
@@ -223,7 +275,7 @@ Accepts theese props:</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/components/TableEditor.jsx.html#lineNumber243">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/components/TableEditor.jsx.html#lineNumber271">source</a></span></span>
     </span>
   </h3>
 
@@ -284,7 +336,7 @@ Accepts theese props:</p>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/src/components/TableEditor.jsx.html#lineNumber222">source</a></span></span>
+      <span data-ice="source"><span><a href="file/src/components/TableEditor.jsx.html#lineNumber247">source</a></span></span>
     </span>
   </h3>
 

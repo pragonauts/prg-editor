@@ -3440,11 +3440,11 @@
     "export": true,
     "importPath": "prg-editor/src/components/TableEditor.jsx",
     "importStyle": "TableEditor",
-    "description": "Main datagrid component\nAccepts theese props:\n\n- `colsConfig` - output from {TableBuilder} to show in table\n- `resource` - url of resource or {AjaxResource} interface, which loads the data\n- `t` - translator function (`word => word`)\n- `loadingErrorMessage` - string to show when loading fails\n- `deleteErrorMessage` - string to show in delete confirmation alert\n- `limit` - required number of entries\n- `disableAdd` - boolean which determins to show an add button",
+    "description": "Main datagrid component\nAccepts theese props:\n\n## Props\n\n| prop | type | description |\n|------|------|-------------|\n| `params` | `Object` | Initial data for query |\n| `colsConfig` | `Object[]` - **required** | output from {TableBuilder} to show in table\n| `resource` | `string|AjaxResource` - **required** | url of resource or {AjaxResource}\n| `t` | `function` | translator function (`word => word`)\n| `loadingErrorMessage` | `string` | string to show when loading fails\n| `deleteErrorMessage` | `string` | string to show in delete confirmation alert\n| `limit` | `number` | required number of entries\n| `disableAdd` | `boolean` | which determins to show an add button\n| `onParamsChange` | `function` | switches component to controlled state\n\n## Controlled TableEditor - managing state from the outside\n\nFor controlling component state you can provide `onParamsChange` prop and manually\nset the `params` property. So you can delegate controlling state to the React Router.",
     "examples": [
       "<TableEditor\n    colsConfig={tableBuilder.getColsConfig()}\n    resource=\"/api/models/:id?someQuery=1\"\n>\n    <Editor\n        validator={validator}\n        context={{\n            create: validator.CONTEXT_CREATE,\n            update: validator.CONTEXT_UPDATE\n        }}\n    >\n        <Input name=\"text\" />\n    </Editor>\n</TableEditor>\n\n// or with filter form at the header\n<TableEditor\n    colsConfig={tableBuilder.getColsConfig()}\n    resource=\"/api/models/:id?someQuery=1\"\n>\n    <header>\n        <Input\n            name=\"search\"\n            placeholder=\"Search\"\n            controlClass=\"is-expanded\"\n            iconBefore={<i className=\"fa fa-search\" aria-hidden=\"true\" />}\n        />\n    </header>\n    <Editor\n        validator={validator}\n    >\n        <Input name=\"text\" />\n    </Editor>\n</TableEditor>"
     ],
-    "lineNumber": 64,
+    "lineNumber": 75,
     "unknown": [
       {
         "tagName": "@class",
@@ -3467,7 +3467,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 66,
+    "lineNumber": 77,
     "undocument": true,
     "unknown": [
       {
@@ -3493,7 +3493,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#serverRequest",
     "access": null,
     "description": null,
-    "lineNumber": 69,
+    "lineNumber": 80,
     "undocument": true,
     "unknown": [
       {
@@ -3516,7 +3516,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#headerForm",
     "access": null,
     "description": null,
-    "lineNumber": 71,
+    "lineNumber": 82,
     "undocument": true,
     "unknown": [
       {
@@ -3539,7 +3539,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
     "access": null,
     "description": null,
-    "lineNumber": 73,
+    "lineNumber": 84,
     "undocument": true,
     "unknown": [
       {
@@ -3562,7 +3562,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#state",
     "access": null,
     "description": null,
-    "lineNumber": 75,
+    "lineNumber": 86,
     "undocument": true,
     "unknown": [
       {
@@ -3585,7 +3585,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#resource",
     "access": null,
     "description": null,
-    "lineNumber": 107,
+    "lineNumber": 118,
     "undocument": true,
     "unknown": [
       {
@@ -3608,7 +3608,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#resource",
     "access": null,
     "description": null,
-    "lineNumber": 109,
+    "lineNumber": 120,
     "undocument": true,
     "unknown": [
       {
@@ -3633,7 +3633,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#getChildContext",
     "access": null,
     "description": null,
-    "lineNumber": 119,
+    "lineNumber": 130,
     "undocument": true,
     "unknown": [
       {
@@ -3659,7 +3659,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#componentDidMount",
     "access": null,
     "description": null,
-    "lineNumber": 128,
+    "lineNumber": 139,
     "undocument": true,
     "unknown": [
       {
@@ -3672,6 +3672,34 @@
   {
     "__docId__": 138,
     "kind": "method",
+    "name": "componentWillReceiveProps",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#componentWillReceiveProps",
+    "access": null,
+    "description": null,
+    "lineNumber": 143,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 139,
+    "kind": "method",
     "name": "componentWillUnmount",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
     "generator": false,
@@ -3680,7 +3708,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#componentWillUnmount",
     "access": null,
     "description": null,
-    "lineNumber": 132,
+    "lineNumber": 149,
     "undocument": true,
     "unknown": [
       {
@@ -3691,7 +3719,7 @@
     "params": []
   },
   {
-    "__docId__": 139,
+    "__docId__": 140,
     "kind": "method",
     "name": "onAjaxError",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3701,7 +3729,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onAjaxError",
     "access": null,
     "description": null,
-    "lineNumber": 136,
+    "lineNumber": 153,
     "undocument": true,
     "unknown": [
       {
@@ -3719,7 +3747,7 @@
     ]
   },
   {
-    "__docId__": 140,
+    "__docId__": 141,
     "kind": "method",
     "name": "onAjaxSuccess",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3729,7 +3757,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onAjaxSuccess",
     "access": null,
     "description": null,
-    "lineNumber": 146,
+    "lineNumber": 163,
     "undocument": true,
     "unknown": [
       {
@@ -3747,7 +3775,7 @@
     ]
   },
   {
-    "__docId__": 141,
+    "__docId__": 142,
     "kind": "method",
     "name": "onAddButtonClick",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3757,7 +3785,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onAddButtonClick",
     "access": null,
     "description": null,
-    "lineNumber": 159,
+    "lineNumber": 176,
     "undocument": true,
     "unknown": [
       {
@@ -3768,7 +3796,7 @@
     "params": []
   },
   {
-    "__docId__": 142,
+    "__docId__": 143,
     "kind": "method",
     "name": "onEditorDidFinish",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3778,7 +3806,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onEditorDidFinish",
     "access": null,
     "description": null,
-    "lineNumber": 163,
+    "lineNumber": 180,
     "undocument": true,
     "unknown": [
       {
@@ -3798,7 +3826,7 @@
     ]
   },
   {
-    "__docId__": 143,
+    "__docId__": 144,
     "kind": "method",
     "name": "onDeleteConfirmationFinished",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3808,7 +3836,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onDeleteConfirmationFinished",
     "access": null,
     "description": null,
-    "lineNumber": 170,
+    "lineNumber": 187,
     "undocument": true,
     "unknown": [
       {
@@ -3826,7 +3854,7 @@
     ]
   },
   {
-    "__docId__": 144,
+    "__docId__": 145,
     "kind": "method",
     "name": "onDeleteConfirmationClosed",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3836,7 +3864,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onDeleteConfirmationClosed",
     "access": null,
     "description": null,
-    "lineNumber": 177,
+    "lineNumber": 194,
     "undocument": true,
     "unknown": [
       {
@@ -3847,7 +3875,7 @@
     "params": []
   },
   {
-    "__docId__": 145,
+    "__docId__": 146,
     "kind": "method",
     "name": "onHeaderSubmit",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3857,7 +3885,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onHeaderSubmit",
     "access": null,
     "description": null,
-    "lineNumber": 181,
+    "lineNumber": 198,
     "undocument": true,
     "unknown": [
       {
@@ -3875,7 +3903,47 @@
     ]
   },
   {
-    "__docId__": 146,
+    "__docId__": 147,
+    "kind": "method",
+    "name": "requestDataLoad",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#requestDataLoad",
+    "access": null,
+    "description": null,
+    "lineNumber": 203,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "params",
+        "optional": true,
+        "types": [
+          "{}"
+        ],
+        "defaultRaw": {},
+        "defaultValue": "{}"
+      },
+      {
+        "name": "overrideParams",
+        "optional": true,
+        "types": [
+          "boolean"
+        ],
+        "defaultRaw": false,
+        "defaultValue": "false"
+      }
+    ]
+  },
+  {
+    "__docId__": 148,
     "kind": "method",
     "name": "loadData",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3885,7 +3953,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#loadData",
     "access": null,
     "description": null,
-    "lineNumber": 186,
+    "lineNumber": 218,
     "undocument": true,
     "unknown": [
       {
@@ -3911,20 +3979,11 @@
         ],
         "defaultRaw": false,
         "defaultValue": "false"
-      },
-      {
-        "name": "overrideParams",
-        "optional": true,
-        "types": [
-          "boolean"
-        ],
-        "defaultRaw": false,
-        "defaultValue": "false"
       }
     ]
   },
   {
-    "__docId__": 147,
+    "__docId__": 149,
     "kind": "method",
     "name": "resetHeaderForm",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3934,7 +3993,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#resetHeaderForm",
     "access": null,
     "description": null,
-    "lineNumber": 209,
+    "lineNumber": 234,
     "undocument": true,
     "unknown": [
       {
@@ -3945,7 +4004,7 @@
     "params": []
   },
   {
-    "__docId__": 148,
+    "__docId__": 150,
     "kind": "method",
     "name": "edit",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3955,7 +4014,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#edit",
     "access": null,
     "description": "Open editor with given item",
-    "lineNumber": 222,
+    "lineNumber": 247,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -3977,7 +4036,7 @@
     ]
   },
   {
-    "__docId__": 149,
+    "__docId__": 151,
     "kind": "method",
     "name": "delete",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3987,7 +4046,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#delete",
     "access": null,
     "description": "Open delete confirmation dialog",
-    "lineNumber": 243,
+    "lineNumber": 271,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -4009,7 +4068,7 @@
     ]
   },
   {
-    "__docId__": 150,
+    "__docId__": 152,
     "kind": "method",
     "name": "renderEditor",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4019,59 +4078,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#renderEditor",
     "access": null,
     "description": null,
-    "lineNumber": 248,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 151,
-    "kind": "method",
-    "name": "renderRemovalConfirmation",
-    "memberof": "src/components/TableEditor.jsx~TableEditor",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#renderRemovalConfirmation",
-    "access": null,
-    "description": null,
-    "lineNumber": 252,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 152,
-    "kind": "method",
-    "name": "renderError",
-    "memberof": "src/components/TableEditor.jsx~TableEditor",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#renderError",
-    "access": null,
-    "description": null,
-    "lineNumber": 262,
+    "lineNumber": 276,
     "undocument": true,
     "unknown": [
       {
@@ -4088,14 +4095,16 @@
   },
   {
     "__docId__": 153,
-    "kind": "member",
-    "name": "errorHandler",
+    "kind": "method",
+    "name": "renderRemovalConfirmation",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
     "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderRemovalConfirmation",
     "access": null,
     "description": null,
-    "lineNumber": 265,
+    "lineNumber": 280,
     "undocument": true,
     "unknown": [
       {
@@ -4103,7 +4112,8 @@
         "tagValue": ""
       }
     ],
-    "type": {
+    "params": [],
+    "return": {
       "types": [
         "*"
       ]
@@ -4112,15 +4122,15 @@
   {
     "__docId__": 154,
     "kind": "method",
-    "name": "renderPaginator",
+    "name": "renderError",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#renderPaginator",
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderError",
     "access": null,
     "description": null,
-    "lineNumber": 273,
+    "lineNumber": 290,
     "undocument": true,
     "unknown": [
       {
@@ -4137,16 +4147,14 @@
   },
   {
     "__docId__": 155,
-    "kind": "method",
-    "name": "renderTable",
+    "kind": "member",
+    "name": "errorHandler",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
-    "generator": false,
-    "async": false,
     "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#renderTable",
+    "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
     "access": null,
     "description": null,
-    "lineNumber": 284,
+    "lineNumber": 293,
     "undocument": true,
     "unknown": [
       {
@@ -4154,8 +4162,7 @@
         "tagValue": ""
       }
     ],
-    "params": [],
-    "return": {
+    "type": {
       "types": [
         "*"
       ]
@@ -4164,15 +4171,15 @@
   {
     "__docId__": 156,
     "kind": "method",
-    "name": "render",
+    "name": "renderPaginator",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#render",
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderPaginator",
     "access": null,
     "description": null,
-    "lineNumber": 311,
+    "lineNumber": 301,
     "undocument": true,
     "unknown": [
       {
@@ -4189,6 +4196,58 @@
   },
   {
     "__docId__": 157,
+    "kind": "method",
+    "name": "renderTable",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderTable",
+    "access": null,
+    "description": null,
+    "lineNumber": 312,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 158,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 339,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 159,
     "kind": "file",
     "name": "src/components/TableEditorHeader.jsx",
     "content": "",
@@ -4199,7 +4258,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 158,
+    "__docId__": 160,
     "kind": "function",
     "name": "isEditor",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4235,7 +4294,7 @@
     }
   },
   {
-    "__docId__": 159,
+    "__docId__": 161,
     "kind": "function",
     "name": "hasForm",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4271,7 +4330,7 @@
     }
   },
   {
-    "__docId__": 160,
+    "__docId__": 162,
     "kind": "function",
     "name": "getFormChildren",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4307,7 +4366,7 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 163,
     "kind": "function",
     "name": "getHeaderChildren",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4343,7 +4402,7 @@
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 164,
     "kind": "function",
     "name": "TableEditorHeader",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4390,7 +4449,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 165,
     "kind": "file",
     "name": "src/components/cells/ActionCell.jsx",
     "content": "",
@@ -4401,7 +4460,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 164,
+    "__docId__": 166,
     "kind": "variable",
     "name": "EMPTY_HREF",
     "memberof": "src/components/cells/ActionCell.jsx",
@@ -4427,7 +4486,7 @@
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 167,
     "kind": "function",
     "name": "ActionCell",
     "memberof": "src/components/cells/ActionCell.jsx",
@@ -4468,7 +4527,7 @@
     }
   },
   {
-    "__docId__": 166,
+    "__docId__": 168,
     "kind": "file",
     "name": "src/components/cells/TextCell.jsx",
     "content": "",
@@ -4479,7 +4538,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 167,
+    "__docId__": 169,
     "kind": "function",
     "name": "TextCell",
     "memberof": "src/components/cells/TextCell.jsx",
@@ -4520,7 +4579,7 @@
     }
   },
   {
-    "__docId__": 168,
+    "__docId__": 170,
     "kind": "file",
     "name": "src/components/tablePropTypes.js",
     "content": "",
@@ -4531,7 +4590,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 169,
+    "__docId__": 171,
     "kind": "variable",
     "name": "ColsConfig",
     "memberof": "src/components/tablePropTypes.js",
@@ -4557,7 +4616,7 @@
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 172,
     "kind": "variable",
     "name": "StringOrFunc",
     "memberof": "src/components/tablePropTypes.js",
@@ -4583,7 +4642,7 @@
     }
   },
   {
-    "__docId__": 171,
+    "__docId__": 173,
     "kind": "file",
     "name": "src/main.js",
     "content": "",
@@ -4594,7 +4653,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 172,
+    "__docId__": 174,
     "kind": "file",
     "name": "src/resourceUrlBuilder.js",
     "content": "",
@@ -4605,7 +4664,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 173,
+    "__docId__": 175,
     "kind": "variable",
     "name": "ID_PLACEHOLDER",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4631,7 +4690,7 @@
     }
   },
   {
-    "__docId__": 174,
+    "__docId__": 176,
     "kind": "variable",
     "name": "LAST_SLASH",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4657,7 +4716,7 @@
     }
   },
   {
-    "__docId__": 175,
+    "__docId__": 177,
     "kind": "function",
     "name": "appendQuery",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4699,7 +4758,7 @@
     }
   },
   {
-    "__docId__": 176,
+    "__docId__": 178,
     "kind": "function",
     "name": "resourceUrl",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4744,7 +4803,7 @@
     }
   },
   {
-    "__docId__": 177,
+    "__docId__": 179,
     "kind": "function",
     "name": "findAll",
     "memberof": "src/resourceUrlBuilder.js",
