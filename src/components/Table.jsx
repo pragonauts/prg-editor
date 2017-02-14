@@ -51,7 +51,7 @@ class Table extends React.Component {
             let order = 0;
 
             if (this.props.orderBy === config.orderBy) {
-                order = this.props.order;
+                order = parseInt(this.props.order, 10);
             }
 
             content = (<button
@@ -118,7 +118,7 @@ Table.propTypes = {
     )),
     colsConfig: ColsConfig.isRequired,
     loading: React.PropTypes.bool,
-    order: React.PropTypes.oneOf([-1, 0, 1]),
+    order: React.PropTypes.oneOf([-1, 0, 1, '-1', '0', '1']),
     orderBy: React.PropTypes.string,
     onOrderChange: React.PropTypes.func,
     idKey: React.PropTypes.string

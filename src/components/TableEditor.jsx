@@ -255,9 +255,6 @@ class TableEditor extends Component {
             editId = idOrData;
         }
 
-
-        // @here ?
-
         this.setState({ editId, editData, editorOpened: true });
     }
 
