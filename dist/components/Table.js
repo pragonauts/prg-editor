@@ -80,7 +80,7 @@ var Table = function (_React$Component) {
                 var order = 0;
 
                 if (this.props.orderBy === config.orderBy) {
-                    order = this.props.order;
+                    order = parseInt(this.props.order, 10);
                 }
 
                 content = _react2.default.createElement(
@@ -183,7 +183,7 @@ Table.propTypes = {
     data: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.objectOf(_react2.default.PropTypes.any)),
     colsConfig: _tablePropTypes.ColsConfig.isRequired,
     loading: _react2.default.PropTypes.bool,
-    order: _react2.default.PropTypes.oneOf([-1, 0, 1]),
+    order: _react2.default.PropTypes.oneOf([-1, 0, 1, '-1', '0', '1']),
     orderBy: _react2.default.PropTypes.string,
     onOrderChange: _react2.default.PropTypes.func,
     idKey: _react2.default.PropTypes.string
