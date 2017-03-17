@@ -287,7 +287,7 @@ Editor.defaultProps = {
     resource: null,
     modalTitle: null,
     onClosed: () => {},
-    t: w => w
+    t: null
 };
 
 Editor.contextTypes = {
@@ -297,7 +297,8 @@ Editor.contextTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    editData: PropTypes.object
+    editData: PropTypes.object,
+    t: PropTypes.func
 };
 
 export default Editor;

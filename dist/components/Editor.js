@@ -353,16 +353,15 @@ Editor.defaultProps = {
     resource: null,
     modalTitle: null,
     onClosed: function onClosed() {},
-    t: function t(w) {
-        return w;
-    }
+    t: null
 };
 
 Editor.contextTypes = {
     resource: _react.PropTypes.object,
     onEditorDidFinish: _react.PropTypes.func,
     editId: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
-    editData: _react.PropTypes.object
+    editData: _react.PropTypes.object,
+    t: _react.PropTypes.func
 };
 
 exports.default = Editor;

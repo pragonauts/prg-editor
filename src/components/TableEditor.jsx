@@ -132,7 +132,8 @@ class TableEditor extends Component {
             resource: this.resource,
             onEditorDidFinish: data => this.onEditorDidFinish(data),
             editId: this.state.editId,
-            editData: this.state.editData
+            editData: this.state.editData,
+            t: this.props.t
         };
     }
 
@@ -369,7 +370,8 @@ TableEditor.childContextTypes = {
         PropTypes.string,
         PropTypes.number
     ]),
-    editData: PropTypes.object
+    editData: PropTypes.object,
+    t: PropTypes.func
 };
 
 TableEditor.defaultProps = {

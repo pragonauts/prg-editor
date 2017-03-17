@@ -114,7 +114,8 @@ var TableEditor = function (_Component) {
                     return _this2.onEditorDidFinish(data);
                 },
                 editId: this.state.editId,
-                editData: this.state.editData
+                editData: this.state.editData,
+                t: this.props.t
             };
         }
     }, {
@@ -407,7 +408,8 @@ TableEditor.childContextTypes = {
     resource: _react.PropTypes.object,
     onEditorDidFinish: _react.PropTypes.func.isRequired,
     editId: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
-    editData: _react.PropTypes.object
+    editData: _react.PropTypes.object,
+    t: _react.PropTypes.func
 };
 
 TableEditor.defaultProps = {
