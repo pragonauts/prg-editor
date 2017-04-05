@@ -86,7 +86,7 @@ export function TableEditorHeader ({
                 onSubmit={(...args) => onHeaderSubmit(...args)}
                 values={params}
             >
-                <div className="control is-grouped">
+                <div className="field is-grouped">
                     {headersChildren}
                     {filterChanged && <p className="control">
                         <button

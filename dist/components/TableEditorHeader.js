@@ -112,7 +112,7 @@ function TableEditorHeader(_ref) {
                 },
                 _react2.default.createElement(
                     'div',
-                    { className: 'control is-grouped' },
+                    { className: 'field is-grouped' },
                     headersChildren,
                     filterChanged && _react2.default.createElement(
                         'p',
