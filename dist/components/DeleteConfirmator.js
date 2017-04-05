@@ -66,7 +66,6 @@ var DeleteConfirmator = function (_Component) {
         key: 'componentWillUnmount',
         value: function componentWillUnmount() {
             this.mounted = false;
-            this.resource.abort();
         }
     }, {
         key: 'onAjaxError',

@@ -32,7 +32,6 @@ class DeleteConfirmator extends Component {
 
     componentWillUnmount () {
         this.mounted = false;
-        this.resource.abort();
     }
 
     onAjaxError (error) {
