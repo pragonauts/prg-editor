@@ -17,27 +17,29 @@ function appendQuery(url, queryObject) {
     var encodedQuery = void 0;
 
     if (queryKeys.length !== 0) {
-        var query = (parts[1] || '').split('&').filter(function (part) {
-            return !!part;
-        }).map(function (string) {
-            return string.split('=');
-        }).map(function (array) {
-            return { key: array[0], value: array[1] };
-        }).reduce(function (obj, q) {
-            return Object.assign(obj, _defineProperty({}, q.key, q.value));
-        }, {});
+        (function () {
+            var query = (parts[1] || '').split('&').filter(function (part) {
+                return !!part;
+            }).map(function (string) {
+                return string.split('=');
+            }).map(function (array) {
+                return { key: array[0], value: array[1] };
+            }).reduce(function (obj, q) {
+                return Object.assign(obj, _defineProperty({}, q.key, q.value));
+            }, {});
 
-        queryKeys.filter(function (key) {
-            return queryObject[key] !== null && queryObject[key] !== undefined;
-        }).forEach(function (key) {
-            query[encodeURIComponent(key)] = encodeURIComponent(queryObject[key]);
-        });
+            queryKeys.filter(function (key) {
+                return queryObject[key] !== null && queryObject[key] !== undefined;
+            }).forEach(function (key) {
+                query[encodeURIComponent(key)] = encodeURIComponent(queryObject[key]);
+            });
 
-        encodedQuery = Object.keys(query).map(function (key) {
-            return key + '=' + query[key];
-        }).join('&');
+            encodedQuery = Object.keys(query).map(function (key) {
+                return key + '=' + query[key];
+            }).join('&');
 
-        encodedQuery = '?' + encodedQuery;
+            encodedQuery = '?' + encodedQuery;
+        })();
     } else if (parts[1]) {
         encodedQuery = '?' + parts[1];
     } else {
