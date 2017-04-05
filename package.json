@@ -1,6 +1,6 @@
 {
   "name": "prg-editor",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Data Table and Editor for use with Prg-Form",
   "main": "dist/main.js",
   "scripts": {
@@ -78,6 +78,6 @@
   },
   "peerDependencies": {
     "jquery": "^3.1.1",
-    "prg-form": "^0.1.0"
+    "prg-form": "^0.2.0"
   }
 }
