@@ -2,8 +2,8 @@
  * @author David Menger
  */
 
-import $ from 'jquery';
 import { findAll, resourceUrl } from './resourceUrlBuilder';
+import AjaxLoader from './AjaxLoader';
 
 /**
  * Rest API Resource data fetcher
@@ -25,7 +25,7 @@ class AjaxResource {
      *
      * @memberOf AjaxResource
      */
-    constructor (apiUrl, ajaxOptions = {}, requestor = $.ajax) {
+    constructor (apiUrl, ajaxOptions = {}, requestor = undefined) {
 
         this.apiUrl = apiUrl;
 
@@ -56,46 +56,18 @@ class AjaxResource {
         this._loadedDataId = null;
 
         // abitily to abort request
-        this._serverRequest = null;
+        this._ajaxLoader = new AjaxLoader(ajaxOptions, requestor);
         this._isAbortable = false;
-
-        // $.ajax
-        this._requestor = requestor;
-
-        this._ajaxOptions = {
-            crossDomain: true,
-            xhrFields: {
-                withCredentials: true
-            },
-            dataType: 'json'
-        };
     }
 
     _request (params) {
         // cleanup previous requests
-        if (this._serverRequest !== null && !this._isAbortable) {
+        if (!this._isAbortable && this._ajaxLoader.isLoading()) {
             return Promise.reject(new Error('Request failed'));
-        } else if (this._serverRequest) {
-            this.abort();
         }
 
-        // make new request
-        return new Promise((resolve, reject) => {
-            this._isAbortable = params.method === 'GET';
-            this._serverRequest = this._requestor(Object.assign({},
-                this._ajaxOptions,
-                params,
-                {
-                    success: (data) => {
-                        this._serverRequest = null;
-                        resolve(data);
-                    },
-                    error: (jqXHR) => {
-                        this._serverRequest = null;
-                        reject(jqXHR);
-                    }
-                }));
-        });
+        this._isAbortable = params.method === 'GET';
+        return this._ajaxLoader.request(params);
     }
 
     _updateRequest (formData, method, id = undefined) {
@@ -199,9 +171,8 @@ class AjaxResource {
      * @memberOf AjaxResource
      */
     abort () {
-        if (this._serverRequest) {
-            this._serverRequest.abort();
-            this._serverRequest = null;
+        if (this._isAbortable) {
+            this._ajaxLoader.abort();
         }
     }
 

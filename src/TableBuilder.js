@@ -4,6 +4,7 @@
 
 import TextCellConfigurator from './cells/TextCellConfigurator';
 import ActionCellConfigurator from './cells/ActionCellConfigurator';
+import RelationCellConfigurator from './cells/RelationCellConfigurator';
 
 /**
  * Table columns configurator
@@ -57,6 +58,23 @@ class TableBuilder {
      */
     addAction (attr, name) {
         const col = new ActionCellConfigurator(attr, name, this.translator);
+        this.cols.push(col);
+        return col;
+    }
+
+    /**
+     * Adds relation cell to table
+     *
+     * @param {string} attr - attribute name
+     * @param {string} name - column name
+     * @returns {RelationCellConfigurator}
+     *
+     * @example
+     * tableBuilder.addAction('userId', 'User name')
+     *     .setResource('/api/users', 'name', 'id');
+     */
+    addRelationCell (attr, name) {
+        const col = new RelationCellConfigurator(attr, name, this.translator);
         this.cols.push(col);
         return col;
     }
