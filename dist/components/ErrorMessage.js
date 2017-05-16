@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -18,8 +22,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var ErrorMessage = function (_React$Component) {
-    _inherits(ErrorMessage, _React$Component);
+var ErrorMessage = function (_Component) {
+    _inherits(ErrorMessage, _Component);
 
     function ErrorMessage() {
         _classCallCheck(this, ErrorMessage);
@@ -60,11 +64,11 @@ var ErrorMessage = function (_React$Component) {
     }]);
 
     return ErrorMessage;
-}(_react2.default.Component);
+}(_react.Component);
 
 ErrorMessage.propTypes = {
-    children: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.element, _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.any), _react2.default.PropTypes.string]),
-    onCloseRequested: _react2.default.PropTypes.func
+    children: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.arrayOf(_propTypes2.default.any), _propTypes2.default.string]),
+    onCloseRequested: _propTypes2.default.func
 };
 
 ErrorMessage.defaultProps = {

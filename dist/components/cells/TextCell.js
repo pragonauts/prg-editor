@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function TextCell(_ref) {
@@ -28,10 +32,10 @@ function TextCell(_ref) {
 }
 
 TextCell.propTypes = {
-    data: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.any).isRequired,
-    config: _react2.default.PropTypes.shape({
-        attr: _react2.default.PropTypes.string.isRequired,
-        map: _react2.default.PropTypes.func
+    data: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+    config: _propTypes2.default.shape({
+        attr: _propTypes2.default.string.isRequired,
+        map: _propTypes2.default.func
     }).isRequired
 };
 

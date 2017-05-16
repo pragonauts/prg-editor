@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _prgForm = require('prg-form');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -136,7 +140,8 @@ function TableEditorHeader(_ref) {
                             'button',
                             {
                                 className: 'button',
-                                formNoValidate: true, type: 'submit'
+                                formNoValidate: true,
+                                type: 'submit'
                             },
                             t('Filter')
                         )
@@ -153,14 +158,14 @@ function TableEditorHeader(_ref) {
 }
 
 TableEditorHeader.propTypes = {
-    t: _react.PropTypes.func,
-    disableAdd: _react.PropTypes.bool,
-    filterChanged: _react.PropTypes.bool,
-    children: _react.PropTypes.oneOfType([_react.PropTypes.any]),
-    onAddButtonClick: _react.PropTypes.func.isRequired,
-    onResetHeaderForm: _react.PropTypes.func.isRequired,
-    onHeaderSubmit: _react.PropTypes.func.isRequired,
-    params: _react.PropTypes.objectOf(_react.PropTypes.any)
+    t: _propTypes2.default.func,
+    disableAdd: _propTypes2.default.bool,
+    filterChanged: _propTypes2.default.bool,
+    children: _propTypes2.default.oneOfType([_propTypes2.default.any]),
+    onAddButtonClick: _propTypes2.default.func.isRequired,
+    onResetHeaderForm: _propTypes2.default.func.isRequired,
+    onHeaderSubmit: _propTypes2.default.func.isRequired,
+    params: _propTypes2.default.objectOf(_propTypes2.default.any)
 };
 
 TableEditorHeader.defaultProps = {

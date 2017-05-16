@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _prgForm = require('prg-form');
 
 var _Spinner = require('./Spinner');
@@ -40,8 +44,8 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Editor = function (_React$Component) {
-    _inherits(Editor, _React$Component);
+var Editor = function (_Component) {
+    _inherits(Editor, _Component);
 
     function Editor(props, context) {
         _classCallCheck(this, Editor);
@@ -317,24 +321,24 @@ var Editor = function (_React$Component) {
     }]);
 
     return Editor;
-}(_react2.default.Component);
+}(_react.Component);
 
 Editor.propTypes = {
-    children: _react.PropTypes.oneOfType([_react.PropTypes.element, _react.PropTypes.arrayOf(_react.PropTypes.any)]),
-    onSubmitDidFinish: _react.PropTypes.func,
-    onSubmitDidFail: _react.PropTypes.func,
-    id: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
-    data: _react.PropTypes.objectOf(_react.PropTypes.any),
-    resource: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]),
-    t: _react.PropTypes.func,
+    children: _propTypes2.default.oneOfType([_propTypes2.default.element, _propTypes2.default.arrayOf(_propTypes2.default.any)]),
+    onSubmitDidFinish: _propTypes2.default.func,
+    onSubmitDidFail: _propTypes2.default.func,
+    id: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    data: _propTypes2.default.objectOf(_propTypes2.default.any),
+    resource: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]),
+    t: _propTypes2.default.func,
     updateErrorMessage: _tablePropTypes.StringOrFunc,
     loadingErrorMessage: _tablePropTypes.StringOrFunc,
-    validator: _react.PropTypes.objectOf(_react.PropTypes.any).isRequired,
-    modalTitle: _react.PropTypes.string,
-    onClosed: _react.PropTypes.func,
-    context: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.shape({
-        create: _react2.default.PropTypes.string,
-        update: _react2.default.PropTypes.string
+    validator: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+    modalTitle: _propTypes2.default.string,
+    onClosed: _propTypes2.default.func,
+    context: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.shape({
+        create: _propTypes2.default.string,
+        update: _propTypes2.default.string
     })])
 };
 
@@ -357,11 +361,11 @@ Editor.defaultProps = {
 };
 
 Editor.contextTypes = {
-    resource: _react.PropTypes.object,
-    onEditorDidFinish: _react.PropTypes.func,
-    editId: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
-    editData: _react.PropTypes.object,
-    t: _react.PropTypes.func
+    resource: _propTypes2.default.object,
+    onEditorDidFinish: _propTypes2.default.func,
+    editId: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    editData: _propTypes2.default.object,
+    t: _propTypes2.default.func
 };
 
 exports.default = Editor;

@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Row = require('./Row');
 
 var _Row2 = _interopRequireDefault(_Row);
@@ -39,8 +43,8 @@ function renderArrow(order) {
     }
 }
 
-var Table = function (_React$Component) {
-    _inherits(Table, _React$Component);
+var Table = function (_Component) {
+    _inherits(Table, _Component);
 
     function Table() {
         _classCallCheck(this, Table);
@@ -177,16 +181,16 @@ var Table = function (_React$Component) {
     }]);
 
     return Table;
-}(_react2.default.Component);
+}(_react.Component);
 
 Table.propTypes = {
-    data: _react2.default.PropTypes.arrayOf(_react2.default.PropTypes.objectOf(_react2.default.PropTypes.any)),
+    data: _propTypes2.default.arrayOf(_propTypes2.default.objectOf(_propTypes2.default.any)),
     colsConfig: _tablePropTypes.ColsConfig.isRequired,
-    loading: _react2.default.PropTypes.bool,
-    order: _react2.default.PropTypes.oneOf([-1, 0, 1, '-1', '0', '1']),
-    orderBy: _react2.default.PropTypes.string,
-    onOrderChange: _react2.default.PropTypes.func,
-    idKey: _react2.default.PropTypes.string
+    loading: _propTypes2.default.bool,
+    order: _propTypes2.default.oneOf([-1, 0, 1, '-1', '0', '1']),
+    orderBy: _propTypes2.default.string,
+    onOrderChange: _propTypes2.default.func,
+    idKey: _propTypes2.default.string
 };
 
 Table.defaultProps = {

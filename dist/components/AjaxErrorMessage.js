@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _ErrorMessage = require('./ErrorMessage');
 
 var _ErrorMessage2 = _interopRequireDefault(_ErrorMessage);
@@ -112,9 +116,9 @@ var AjaxErrorMessage = function (_Component) {
 
 AjaxErrorMessage.propTypes = {
     message: _tablePropTypes.StringOrFunc.isRequired,
-    t: _react.PropTypes.func,
-    onTryAgain: _react.PropTypes.func,
-    error: _react.PropTypes.oneOfType([_react.PropTypes.any])
+    t: _propTypes2.default.func,
+    onTryAgain: _propTypes2.default.func,
+    error: _propTypes2.default.oneOfType([_propTypes2.default.any])
 };
 
 AjaxErrorMessage.defaultProps = {

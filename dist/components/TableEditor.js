@@ -12,6 +12,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Table = require('./Table');
 
 var _Table2 = _interopRequireDefault(_Table);
@@ -392,24 +396,24 @@ var TableEditor = function (_Component) {
 }(_react.Component);
 
 TableEditor.propTypes = {
-    children: _react.PropTypes.oneOfType([_react.PropTypes.any]),
+    children: _propTypes2.default.oneOfType([_propTypes2.default.any]),
     colsConfig: _tablePropTypes.ColsConfig.isRequired,
-    params: _react.PropTypes.objectOf(_react.PropTypes.any),
-    resource: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]).isRequired,
-    t: _react.PropTypes.func,
+    params: _propTypes2.default.objectOf(_propTypes2.default.any),
+    resource: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]).isRequired,
+    t: _propTypes2.default.func,
     loadingErrorMessage: _tablePropTypes.StringOrFunc,
     deleteErrorMessage: _tablePropTypes.StringOrFunc,
-    limit: _react.PropTypes.number,
-    disableAdd: _react.PropTypes.bool,
-    onParamsChange: _react.PropTypes.func
+    limit: _propTypes2.default.number,
+    disableAdd: _propTypes2.default.bool,
+    onParamsChange: _propTypes2.default.func
 };
 
 TableEditor.childContextTypes = {
-    resource: _react.PropTypes.object,
-    onEditorDidFinish: _react.PropTypes.func.isRequired,
-    editId: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]),
-    editData: _react.PropTypes.object,
-    t: _react.PropTypes.func
+    resource: _propTypes2.default.object,
+    onEditorDidFinish: _propTypes2.default.func.isRequired,
+    editId: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]),
+    editData: _propTypes2.default.object,
+    t: _propTypes2.default.func
 };
 
 TableEditor.defaultProps = {

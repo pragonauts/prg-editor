@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var EMPTY_HREF = '#';
@@ -62,14 +66,14 @@ function ActionCell(_ref) {
 }
 
 ActionCell.propTypes = {
-    data: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.any).isRequired,
-    config: _react2.default.PropTypes.shape({
-        attr: _react2.default.PropTypes.string.isRequired,
-        map: _react2.default.PropTypes.func,
-        href: _react2.default.PropTypes.func,
-        onClick: _react2.default.PropTypes.func,
-        condition: _react2.default.PropTypes.func,
-        label: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.func]).isRequired
+    data: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
+    config: _propTypes2.default.shape({
+        attr: _propTypes2.default.string.isRequired,
+        map: _propTypes2.default.func,
+        href: _propTypes2.default.func,
+        onClick: _propTypes2.default.func,
+        condition: _propTypes2.default.func,
+        label: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.func]).isRequired
     }).isRequired
 };
 

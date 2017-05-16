@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _tablePropTypes = require('./tablePropTypes');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -34,7 +38,7 @@ function Row(props) {
 }
 
 Row.propTypes = {
-    data: _react2.default.PropTypes.objectOf(_react2.default.PropTypes.any).isRequired,
+    data: _propTypes2.default.objectOf(_propTypes2.default.any).isRequired,
     colsConfig: _tablePropTypes.ColsConfig.isRequired
 };
 

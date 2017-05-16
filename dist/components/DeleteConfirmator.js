@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 var _Spinner = require('./Spinner');
 
 var _Spinner2 = _interopRequireDefault(_Spinner);
@@ -184,11 +188,11 @@ var DeleteConfirmator = function (_Component) {
 }(_react.Component);
 
 DeleteConfirmator.propTypes = {
-    onDeleteDidFinish: _react.PropTypes.func,
-    onDeleteDidFail: _react.PropTypes.func,
-    id: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.number]).isRequired,
-    resource: _react.PropTypes.oneOfType([_react.PropTypes.string, _react.PropTypes.object]).isRequired,
-    t: _react.PropTypes.func,
+    onDeleteDidFinish: _propTypes2.default.func,
+    onDeleteDidFail: _propTypes2.default.func,
+    id: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.number]).isRequired,
+    resource: _propTypes2.default.oneOfType([_propTypes2.default.string, _propTypes2.default.object]).isRequired,
+    t: _propTypes2.default.func,
     deleteErrorMessage: _tablePropTypes.StringOrFunc,
     deleteConfirmationMessage: _tablePropTypes.StringOrFunc
 };
