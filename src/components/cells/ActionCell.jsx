@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const EMPTY_HREF = '#';
 
@@ -47,16 +48,16 @@ function ActionCell ({ config, data }) {
 }
 
 ActionCell.propTypes = {
-    data: React.PropTypes.objectOf(React.PropTypes.any).isRequired,
-    config: React.PropTypes.shape({
-        attr: React.PropTypes.string.isRequired,
-        map: React.PropTypes.func,
-        href: React.PropTypes.func,
-        onClick: React.PropTypes.func,
-        condition: React.PropTypes.func,
-        label: React.PropTypes.oneOfType([
-            React.PropTypes.string,
-            React.PropTypes.func
+    data: PropTypes.objectOf(PropTypes.any).isRequired,
+    config: PropTypes.shape({
+        attr: PropTypes.string.isRequired,
+        map: PropTypes.func,
+        href: PropTypes.func,
+        onClick: PropTypes.func,
+        condition: PropTypes.func,
+        label: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.func
         ]).isRequired
     }).isRequired
 };

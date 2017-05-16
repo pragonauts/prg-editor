@@ -2,15 +2,15 @@
  * @author David Menger
  */
 
-import React from 'react';
+import PropTypes from 'prop-types';
 
-export const ColsConfig = React.PropTypes.arrayOf(React.PropTypes.objectOf(
-    React.PropTypes.any
+export const ColsConfig = PropTypes.arrayOf(PropTypes.objectOf(
+    PropTypes.any
 ));
 
-export const StringOrFunc = React.PropTypes.oneOfType([
-    React.PropTypes.string,
-    React.PropTypes.func
+export const StringOrFunc = PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.func
 ]);
 
 export default { ColsConfig, StringOrFunc };

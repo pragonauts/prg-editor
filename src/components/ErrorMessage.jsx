@@ -2,9 +2,10 @@
  * @author David Menger
  */
 
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-class ErrorMessage extends React.Component {
+class ErrorMessage extends Component {
 
     onCloseRequested () {
         if (typeof this.props.onCloseRequested === 'function') {
@@ -27,12 +28,12 @@ class ErrorMessage extends React.Component {
 }
 
 ErrorMessage.propTypes = {
-    children: React.PropTypes.oneOfType([
-        React.PropTypes.element,
-        React.PropTypes.arrayOf(React.PropTypes.any),
-        React.PropTypes.string
+    children: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.arrayOf(PropTypes.any),
+        PropTypes.string
     ]),
-    onCloseRequested: React.PropTypes.func
+    onCloseRequested: PropTypes.func
 };
 
 ErrorMessage.defaultProps = {

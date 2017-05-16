@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 import { ColsConfig } from './tablePropTypes';
 
 function Row (props) {
@@ -18,7 +19,7 @@ function Row (props) {
 }
 
 Row.propTypes = {
-    data: React.PropTypes.objectOf(React.PropTypes.any).isRequired,
+    data: PropTypes.objectOf(PropTypes.any).isRequired,
     colsConfig: ColsConfig.isRequired
 };
 

@@ -2,7 +2,8 @@
  * @author David Menger
  */
 
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import ErrorMessage from './ErrorMessage';
 import { StringOrFunc } from './tablePropTypes';
 

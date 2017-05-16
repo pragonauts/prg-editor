@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function TextCell ({ config, data }) {
     let value = data[config.attr];
@@ -16,10 +17,10 @@ function TextCell ({ config, data }) {
 }
 
 TextCell.propTypes = {
-    data: React.PropTypes.objectOf(React.PropTypes.any).isRequired,
-    config: React.PropTypes.shape({
-        attr: React.PropTypes.string.isRequired,
-        map: React.PropTypes.func
+    data: PropTypes.objectOf(PropTypes.any).isRequired,
+    config: PropTypes.shape({
+        attr: PropTypes.string.isRequired,
+        map: PropTypes.func
     }).isRequired
 };
 

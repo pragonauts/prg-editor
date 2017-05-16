@@ -3,6 +3,7 @@
  */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 class RelationCell extends Component {
 
@@ -57,15 +58,15 @@ class RelationCell extends Component {
 }
 
 RelationCell.propTypes = {
-    data: React.PropTypes.objectOf(React.PropTypes.any).isRequired,
-    config: React.PropTypes.shape({
-        attr: React.PropTypes.string.isRequired,
-        map: React.PropTypes.func,
-        loaderContent: React.PropTypes.any,
-        errorContent: React.PropTypes.any,
-        resource: React.PropTypes.shape({
-            load: React.PropTypes.func.isRequired,
-            abort: React.PropTypes.func.isRequired
+    data: PropTypes.objectOf(PropTypes.any).isRequired,
+    config: PropTypes.shape({
+        attr: PropTypes.string.isRequired,
+        map: PropTypes.func,
+        loaderContent: PropTypes.any,
+        errorContent: PropTypes.any,
+        resource: PropTypes.shape({
+            load: PropTypes.func.isRequired,
+            abort: PropTypes.func.isRequired
         }).isRequired
     }).isRequired
 };

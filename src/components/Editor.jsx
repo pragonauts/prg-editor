@@ -2,7 +2,8 @@
  * @author David Menger
  */
 
-import React, { PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { ValidatorForm } from 'prg-form';
 import Spinner from './Spinner';
 import Modal from './Modal';
@@ -32,7 +33,7 @@ import AjaxResource from '../AjaxResource';
  * @class Editor
  * @extends {React.Component}
  */
-class Editor extends React.Component {
+class Editor extends Component {
 
     constructor (props, context) {
         super(props, context);
@@ -263,11 +264,11 @@ Editor.propTypes = {
     validator: PropTypes.objectOf(PropTypes.any).isRequired,
     modalTitle: PropTypes.string,
     onClosed: PropTypes.func,
-    context: React.PropTypes.oneOfType([
-        React.PropTypes.string,
-        React.PropTypes.shape({
-            create: React.PropTypes.string,
-            update: React.PropTypes.string
+    context: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.shape({
+            create: PropTypes.string,
+            update: PropTypes.string
         })
     ])
 };

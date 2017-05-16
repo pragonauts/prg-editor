@@ -2,7 +2,8 @@
  * @author David Menger
  */
 
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Row from './Row';
 import Spinner from './Spinner';
 import { ColsConfig } from './tablePropTypes';
@@ -18,7 +19,7 @@ function renderArrow (order) {
     }
 }
 
-class Table extends React.Component {
+class Table extends Component {
 
     orderBy (columnAttr, order = 0) {
         let nextOrder;
@@ -89,11 +90,11 @@ class Table extends React.Component {
         }
 
         return this.props.data
-            .map((row, i) => <Row
+            .map((row, i) => (<Row
                 data={row}
                 colsConfig={this.props.colsConfig}
                 key={row[this.props.idKey] || i}
-            />);
+            />));
     }
 
     render () {
@@ -113,15 +114,15 @@ class Table extends React.Component {
 }
 
 Table.propTypes = {
-    data: React.PropTypes.arrayOf(React.PropTypes.objectOf(
-        React.PropTypes.any
+    data: PropTypes.arrayOf(PropTypes.objectOf(
+        PropTypes.any
     )),
     colsConfig: ColsConfig.isRequired,
-    loading: React.PropTypes.bool,
-    order: React.PropTypes.oneOf([-1, 0, 1, '-1', '0', '1']),
-    orderBy: React.PropTypes.string,
-    onOrderChange: React.PropTypes.func,
-    idKey: React.PropTypes.string
+    loading: PropTypes.bool,
+    order: PropTypes.oneOf([-1, 0, 1, '-1', '0', '1']),
+    orderBy: PropTypes.string,
+    onOrderChange: PropTypes.func,
+    idKey: PropTypes.string
 };
 
 Table.defaultProps = {

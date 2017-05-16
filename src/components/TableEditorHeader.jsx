@@ -2,7 +2,8 @@
  * @author David Menger
  */
 
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Form } from 'prg-form';
 
 function isEditor (child) {
@@ -98,7 +99,8 @@ export function TableEditorHeader ({
                     {headersChildren && <p className="control">
                         <button
                             className="button"
-                            formNoValidate type="submit"
+                            formNoValidate
+                            type="submit"
                         >
                             {t('Filter')}
                         </button>

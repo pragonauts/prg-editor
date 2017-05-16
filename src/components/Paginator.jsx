@@ -3,6 +3,7 @@
  */
 
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function Paginator (props) {
     return (<nav className="pagination is-centered">
@@ -54,9 +55,9 @@ function Paginator (props) {
 }
 
 Paginator.propTypes = {
-    page: React.PropTypes.number,
-    nextPage: React.PropTypes.number,
-    onPageChange: React.PropTypes.func
+    page: PropTypes.number,
+    nextPage: PropTypes.number,
+    onPageChange: PropTypes.func
 };
 
 Paginator.defaultProps = {

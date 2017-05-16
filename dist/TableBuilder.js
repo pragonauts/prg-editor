@@ -14,6 +14,10 @@ var _ActionCellConfigurator = require('./cells/ActionCellConfigurator');
 
 var _ActionCellConfigurator2 = _interopRequireDefault(_ActionCellConfigurator);
 
+var _RelationCellConfigurator = require('./cells/RelationCellConfigurator');
+
+var _RelationCellConfigurator2 = _interopRequireDefault(_RelationCellConfigurator);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -40,6 +44,13 @@ var TableBuilder = function () {
     key: 'addAction',
     value: function addAction(attr, name) {
       var col = new _ActionCellConfigurator2.default(attr, name, this.translator);
+      this.cols.push(col);
+      return col;
+    }
+  }, {
+    key: 'addRelationCell',
+    value: function addRelationCell(attr, name) {
+      var col = new _RelationCellConfigurator2.default(attr, name, this.translator);
       this.cols.push(col);
       return col;
     }
