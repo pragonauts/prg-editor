@@ -161,7 +161,7 @@ var Table = function (_Component) {
 
             return _react2.default.createElement(
                 'table',
-                { className: 'table' },
+                { className: 'table is-fullwidth' },
                 _react2.default.createElement(
                     'thead',
                     { className: 'thead-default' },
