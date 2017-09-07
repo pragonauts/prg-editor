@@ -101,7 +101,7 @@ class Table extends Component {
         const header = this.renderHeader();
         const body = this.renderBody();
 
-        return (<table className="table">
+        return (<table className="table is-fullwidth">
             <thead className="thead-default">
                 <tr>{header}</tr>
             </thead>
