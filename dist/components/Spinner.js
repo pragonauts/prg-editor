@@ -8,6 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var loading = '@keyframes r-bars-loading-animation {' + '0% { transform: scale(1); }' + '20% { transform: scale(1, 1.8); }' + '40% { transform: scale(1); }' + '}';
@@ -25,10 +29,6 @@ if (!styleSheet) {
 styleSheet.insertRule(loading, styleSheet.cssRules && styleSheet.cssRules.length);
 
 var styles = {
-    loaderContainer: {
-        minHeight: '20vh',
-        margin: ''
-    },
     loading: {
         position: 'relative'
     },
@@ -54,13 +54,24 @@ var styles = {
     }
 };
 
-function Spinner() {
+function Spinner(_ref) {
+    var minHeight = _ref.minHeight;
+
     return _react2.default.createElement(
         'div',
-        { className: 'columns is-vcentered is-centered', style: styles.loaderContainer },
+        {
+            className: 'columns is-vcentered is-centered',
+            style: {
+                minHeight: minHeight,
+                margin: ''
+            }
+        },
         _react2.default.createElement(
             'div',
-            { className: 'column loading has-text-centered', style: styles.loading },
+            {
+                className: 'column loading has-text-centered',
+                style: styles.loading
+            },
             _react2.default.createElement('div', { className: 'loading-bar', style: Object.assign(styles.n1, styles.loadingBar) }),
             _react2.default.createElement('div', { className: 'loading-bar', style: Object.assign(styles.n2, styles.loadingBar) }),
             _react2.default.createElement('div', { className: 'loading-bar', style: Object.assign(styles.n3, styles.loadingBar) }),
@@ -68,5 +79,13 @@ function Spinner() {
         )
     );
 }
+
+Spinner.propTypes = {
+    minHeight: _propTypes2.default.oneOfType([_propTypes2.default.number, _propTypes2.default.string])
+};
+
+Spinner.defaultProps = {
+    minHeight: '20vh'
+};
 
 exports.default = Spinner;
