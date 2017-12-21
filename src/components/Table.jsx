@@ -4,8 +4,8 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Spinner } from 'prg-form';
 import Row from './Row';
-import Spinner from './Spinner';
 import { ColsConfig } from './tablePropTypes';
 
 function renderArrow (order) {

@@ -197,6 +197,40 @@ describe('<TableEditor>', function () {
             });
     });
 
+    it('should be able to disable pagination', function () {
+        const server = sinon.fakeServer.create();
+
+        server.respondWith(
+            'GET', /^\/api\/entity/,
+            [200, { 'Content-Type': 'application/json' },
+                JSON.stringify({ data: DEFAULT_DATA, nextOffset: 20, offset: 0 })]);
+
+        const tb = new TableBuilder();
+
+        tb.addText('name', 'Name');
+
+        const app = mount(
+            <TableEditor
+                resource={RESOURCE}
+                colsConfig={tb.getColsConfig()}
+                noPagination
+            />
+        );
+
+        assert.equal(app.find('div.loading').length, 1, 'table should start in loading state');
+        assert.equal(server.requests[0].url, '/api/entity?order=1');
+
+        server.respond();
+        return nextTick()
+            .then(() => {
+                assert.equal(app.find('td').length, 2, 'there should be two cells');
+
+                // there should be no pagination
+                assert.equal(app.find('.page-next').length, 0, 'there should be no pagination');
+                server.restore();
+            });
+    });
+
     it('should make concurrent request, when pagination clicked fast', function () {
         const server = sinon.fakeServer.create();
 

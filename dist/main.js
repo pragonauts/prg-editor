@@ -5,13 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.AjaxErrorMessage = exports.AjaxResource = exports.Editor = exports.Modal = exports.Spinner = exports.TableEditor = exports.TableBuilder = undefined;
 
+var _prgForm = require('prg-form');
+
 var _TableEditor = require('./components/TableEditor');
 
 var _TableEditor2 = _interopRequireDefault(_TableEditor);
-
-var _Spinner = require('./components/Spinner');
-
-var _Spinner2 = _interopRequireDefault(_Spinner);
 
 var _AjaxErrorMessage = require('./components/AjaxErrorMessage');
 
@@ -38,7 +36,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = _TableEditor2.default;
 exports.TableBuilder = _TableBuilder2.default;
 exports.TableEditor = _TableEditor2.default;
-exports.Spinner = _Spinner2.default;
+exports.Spinner = _prgForm.Spinner;
 exports.Modal = _Modal2.default;
 exports.Editor = _Editor2.default;
 exports.AjaxResource = _AjaxResource2.default;

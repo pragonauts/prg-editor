@@ -29,6 +29,7 @@ import { TableEditorHeader, getFormChildren } from './TableEditorHeader';
  * | `limit` | `number` | required number of entries
  * | `disableAdd` | `boolean` | which determins to show an add button
  * | `onParamsChange` | `function` | switches component to controlled state
+ * | `noPagination` | `boolean` | disables pagination
  *
  * ## Controlled TableEditor - managing state from the outside
  *
@@ -228,7 +229,17 @@ class TableEditor extends Component {
             });
         }
 
-        this.resource.getAll(params)
+        let getByParams = params;
+
+
+        if (this.props.noPagination) {
+            getByParams = Object.assign({}, params);
+
+            delete getByParams.limit;
+            delete getByParams.offset;
+        }
+
+        this.resource.getAll(getByParams)
             .then(data => this.onAjaxSuccess(data))
             .catch(err => this.onAjaxError(err));
     }
@@ -298,6 +309,10 @@ class TableEditor extends Component {
     }
 
     renderPaginator () {
+        if (this.props.noPagination) {
+            return null;
+        }
+
         const { offset, limit } = this.state.params;
         const page = offset / limit;
 
@@ -361,7 +376,8 @@ TableEditor.propTypes = {
     deleteErrorMessage: StringOrFunc,
     limit: PropTypes.number,
     disableAdd: PropTypes.bool,
-    onParamsChange: PropTypes.func
+    onParamsChange: PropTypes.func,
+    noPagination: PropTypes.bool
 };
 
 TableEditor.childContextTypes = {
@@ -383,7 +399,8 @@ TableEditor.defaultProps = {
     deleteErrorMessage: 'Delete failed', // i18s
     disableAdd: false,
     limit: 20,
-    onParamsChange: null
+    onParamsChange: null,
+    noPagination: false
 };
 
 export default TableEditor;

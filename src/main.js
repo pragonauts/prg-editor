@@ -2,8 +2,9 @@
  * @author David Menger
  */
 
+import { Spinner } from 'prg-form';
+
 import TableEditor from './components/TableEditor';
-import Spinner from './components/Spinner';
 import AjaxErrorMessage from './components/AjaxErrorMessage';
 import TableBuilder from './TableBuilder';
 import Modal from './components/Modal';

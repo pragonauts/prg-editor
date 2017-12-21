@@ -4,8 +4,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ValidatorForm } from 'prg-form';
-import Spinner from './Spinner';
+import { ValidatorForm, Spinner } from 'prg-form';
 import Modal from './Modal';
 import AjaxErrorMessage from './AjaxErrorMessage';
 import { StringOrFunc } from './tablePropTypes';

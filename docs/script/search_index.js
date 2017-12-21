@@ -30,12 +30,6 @@ window.esdocSearchIndex = [
     "function"
   ],
   [
-    "prg-editor/src/components/spinner.jsx~spinner",
-    "function/index.html#static-function-Spinner",
-    "<span>Spinner</span> <span class=\"search-result-import-path\">prg-editor/src/components/Spinner.jsx</span>",
-    "function"
-  ],
-  [
     "prg-editor/src/tablebuilder.js~tablebuilder",
     "class/src/TableBuilder.js~TableBuilder.html",
     "<span>TableBuilder</span> <span class=\"search-result-import-path\">prg-editor/src/TableBuilder.js</span>",
@@ -52,6 +46,12 @@ window.esdocSearchIndex = [
     "class/src/cells/TextCellConfigurator.js~TextCellConfigurator.html",
     "<span>TextCellConfigurator</span> <span class=\"search-result-import-path\">prg-editor/src/cells/TextCellConfigurator.js</span>",
     "class"
+  ],
+  [
+    "src/ajaxloader.js",
+    "file/src/AjaxLoader.js.html",
+    "src/AjaxLoader.js",
+    "file"
   ],
   [
     "src/ajaxresource.js",
@@ -132,6 +132,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/relationresource.js",
+    "file/src/RelationResource.js.html",
+    "src/RelationResource.js",
+    "file"
+  ],
+  [
     "src/tablebuilder.js",
     "file/src/TableBuilder.js.html",
     "src/TableBuilder.js",
@@ -141,6 +147,12 @@ window.esdocSearchIndex = [
     "src/tablebuilder.js~tablebuilder#addaction",
     "class/src/TableBuilder.js~TableBuilder.html#instance-method-addAction",
     "src/TableBuilder.js~TableBuilder#addAction",
+    "method"
+  ],
+  [
+    "src/tablebuilder.js~tablebuilder#addrelationcell",
+    "class/src/TableBuilder.js~TableBuilder.html#instance-method-addRelationCell",
+    "src/TableBuilder.js~TableBuilder#addRelationCell",
     "method"
   ],
   [
@@ -222,6 +234,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/cells/relationcellconfigurator.js",
+    "file/src/cells/RelationCellConfigurator.js.html",
+    "src/cells/RelationCellConfigurator.js",
+    "file"
+  ],
+  [
     "src/cells/textcellconfigurator.js",
     "file/src/cells/TextCellConfigurator.js.html",
     "src/cells/TextCellConfigurator.js",
@@ -270,12 +288,6 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "src/components/spinner.jsx",
-    "file/src/components/Spinner.jsx.html",
-    "src/components/Spinner.jsx",
-    "file"
-  ],
-  [
     "src/components/table.jsx",
     "file/src/components/Table.jsx.html",
     "src/components/Table.jsx",
@@ -309,6 +321,12 @@ window.esdocSearchIndex = [
     "src/components/cells/actioncell.jsx",
     "file/src/components/cells/ActionCell.jsx.html",
     "src/components/cells/ActionCell.jsx",
+    "file"
+  ],
+  [
+    "src/components/cells/relationcell.jsx",
+    "file/src/components/cells/RelationCell.jsx.html",
+    "src/components/cells/RelationCell.jsx",
     "file"
   ],
   [

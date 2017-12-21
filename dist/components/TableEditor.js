@@ -234,7 +234,16 @@ var TableEditor = function (_Component) {
                 });
             }
 
-            this.resource.getAll(params).then(function (data) {
+            var getByParams = params;
+
+            if (this.props.noPagination) {
+                getByParams = Object.assign({}, params);
+
+                delete getByParams.limit;
+                delete getByParams.offset;
+            }
+
+            this.resource.getAll(getByParams).then(function (data) {
                 return _this3.onAjaxSuccess(data);
             }).catch(function (err) {
                 return _this3.onAjaxError(err);
@@ -311,6 +320,10 @@ var TableEditor = function (_Component) {
         key: 'renderPaginator',
         value: function renderPaginator() {
             var _this6 = this;
+
+            if (this.props.noPagination) {
+                return null;
+            }
 
             var _state$params2 = this.state.params,
                 offset = _state$params2.offset,
@@ -405,7 +418,8 @@ TableEditor.propTypes = {
     deleteErrorMessage: _tablePropTypes.StringOrFunc,
     limit: _propTypes2.default.number,
     disableAdd: _propTypes2.default.bool,
-    onParamsChange: _propTypes2.default.func
+    onParamsChange: _propTypes2.default.func,
+    noPagination: _propTypes2.default.bool
 };
 
 TableEditor.childContextTypes = {
@@ -426,7 +440,8 @@ TableEditor.defaultProps = {
     deleteErrorMessage: 'Delete failed',
     disableAdd: false,
     limit: 20,
-    onParamsChange: null
+    onParamsChange: null,
+    noPagination: false
 };
 
 exports.default = TableEditor;

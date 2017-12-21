@@ -14,13 +14,11 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
+var _prgForm = require('prg-form');
+
 var _Row = require('./Row');
 
 var _Row2 = _interopRequireDefault(_Row);
-
-var _Spinner = require('./Spinner');
-
-var _Spinner2 = _interopRequireDefault(_Spinner);
 
 var _tablePropTypes = require('./tablePropTypes');
 
@@ -136,7 +134,7 @@ var Table = function (_Component) {
                     _react2.default.createElement(
                         'td',
                         { colSpan: colSpan, className: 'loading' },
-                        _react2.default.createElement(_Spinner2.default, null)
+                        _react2.default.createElement(_prgForm.Spinner, null)
                     )
                 );
             }

@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Spinner } from 'prg-form';
 
-import Spinner from './Spinner';
 import Modal from './Modal';
 import AjaxErrorMessage from './AjaxErrorMessage';
 import AjaxResource from '../AjaxResource';

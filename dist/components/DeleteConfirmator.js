@@ -14,9 +14,7 @@ var _propTypes = require('prop-types');
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _Spinner = require('./Spinner');
-
-var _Spinner2 = _interopRequireDefault(_Spinner);
+var _prgForm = require('prg-form');
 
 var _Modal = require('./Modal');
 
@@ -136,7 +134,7 @@ var DeleteConfirmator = function (_Component) {
                 return _react2.default.createElement(
                     'div',
                     null,
-                    _react2.default.createElement(_Spinner2.default, null)
+                    _react2.default.createElement(_prgForm.Spinner, null)
                 );
             }
 

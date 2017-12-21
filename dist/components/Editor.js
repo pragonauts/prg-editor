@@ -18,10 +18,6 @@ var _propTypes2 = _interopRequireDefault(_propTypes);
 
 var _prgForm = require('prg-form');
 
-var _Spinner = require('./Spinner');
-
-var _Spinner2 = _interopRequireDefault(_Spinner);
-
 var _Modal = require('./Modal');
 
 var _Modal2 = _interopRequireDefault(_Modal);
@@ -244,7 +240,7 @@ var Editor = function (_Component) {
                     t: this.t
                 });
             } else if (this.state.loading) {
-                content = _react2.default.createElement(_Spinner2.default, null);
+                content = _react2.default.createElement(_prgForm.Spinner, null);
             } else if (this.props.modalTitle || this.context.onEditorDidFinish) {
                 var title = this.props.modalTitle;
                 if (!title || typeof title === 'boolean') {

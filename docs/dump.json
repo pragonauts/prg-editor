@@ -2,6 +2,335 @@
   {
     "__docId__": 0,
     "kind": "file",
+    "name": "src/AjaxLoader.js",
+    "content": "",
+    "static": true,
+    "longname": "src/AjaxLoader.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 1,
+    "kind": "class",
+    "name": "AjaxLoader",
+    "memberof": "src/AjaxLoader.js",
+    "static": true,
+    "longname": "src/AjaxLoader.js~AjaxLoader",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/AjaxLoader.js",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 7,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 2,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#constructor",
+    "access": null,
+    "description": "Creates an instance of AjaxResource.",
+    "lineNumber": 18,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "apiUrl",
+        "description": "resource url"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "ajaxOptions",
+        "description": "options passed to $.ajax"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "$.ajax",
+        "defaultRaw": "$.ajax",
+        "name": "requestor",
+        "description": "alternative to $.ajax"
+      }
+    ]
+  },
+  {
+    "__docId__": 3,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 21,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 4,
+    "kind": "member",
+    "name": "_requestor",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_requestor",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 5,
+    "kind": "member",
+    "name": "_ajaxOptions",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_ajaxOptions",
+    "access": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"crossDomain\": boolean, \"xhrFields\": *, \"dataType\": string}"
+      ]
+    }
+  },
+  {
+    "__docId__": 6,
+    "kind": "method",
+    "name": "isLoading",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#isLoading",
+    "access": null,
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 7,
+    "kind": "method",
+    "name": "request",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#request",
+    "access": null,
+    "description": null,
+    "lineNumber": 39,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "params",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 8,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 45,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 9,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 10,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 54,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 11,
+    "kind": "method",
+    "name": "abort",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#abort",
+    "access": null,
+    "description": null,
+    "lineNumber": 61,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 12,
+    "kind": "member",
+    "name": "_serverRequest",
+    "memberof": "src/AjaxLoader.js~AjaxLoader",
+    "static": false,
+    "longname": "src/AjaxLoader.js~AjaxLoader#_serverRequest",
+    "access": null,
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 13,
+    "kind": "file",
     "name": "src/AjaxResource.js",
     "content": "",
     "static": true,
@@ -11,7 +340,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 1,
+    "__docId__": 14,
     "kind": "class",
     "name": "AjaxResource",
     "memberof": "src/AjaxResource.js",
@@ -32,7 +361,7 @@
     "interface": false
   },
   {
-    "__docId__": 2,
+    "__docId__": 15,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -87,7 +416,7 @@
     ]
   },
   {
-    "__docId__": 3,
+    "__docId__": 16,
     "kind": "member",
     "name": "apiUrl",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -110,7 +439,7 @@
     }
   },
   {
-    "__docId__": 4,
+    "__docId__": 17,
     "kind": "member",
     "name": "mapGetOutput",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -132,7 +461,7 @@
     }
   },
   {
-    "__docId__": 5,
+    "__docId__": 18,
     "kind": "member",
     "name": "mapGetAllOutput",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -154,7 +483,7 @@
     }
   },
   {
-    "__docId__": 6,
+    "__docId__": 19,
     "kind": "member",
     "name": "mapInput",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -176,7 +505,7 @@
     }
   },
   {
-    "__docId__": 7,
+    "__docId__": 20,
     "kind": "member",
     "name": "mapParams",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -198,7 +527,7 @@
     }
   },
   {
-    "__docId__": 8,
+    "__docId__": 21,
     "kind": "member",
     "name": "_loadedDataId",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -221,12 +550,12 @@
     }
   },
   {
-    "__docId__": 9,
+    "__docId__": 22,
     "kind": "member",
-    "name": "_serverRequest",
+    "name": "_ajaxLoader",
     "memberof": "src/AjaxResource.js~AjaxResource",
     "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "longname": "src/AjaxResource.js~AjaxResource#_ajaxLoader",
     "access": null,
     "description": null,
     "lineNumber": 59,
@@ -244,7 +573,7 @@
     }
   },
   {
-    "__docId__": 10,
+    "__docId__": 23,
     "kind": "member",
     "name": "_isAbortable",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -267,53 +596,7 @@
     }
   },
   {
-    "__docId__": 11,
-    "kind": "member",
-    "name": "_requestor",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_requestor",
-    "access": null,
-    "description": null,
-    "lineNumber": 63,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 12,
-    "kind": "member",
-    "name": "_ajaxOptions",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_ajaxOptions",
-    "access": null,
-    "description": null,
-    "lineNumber": 65,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "{\"crossDomain\": boolean, \"xhrFields\": *, \"dataType\": string}"
-      ]
-    }
-  },
-  {
-    "__docId__": 13,
+    "__docId__": 24,
     "kind": "method",
     "name": "_request",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -323,7 +606,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#_request",
     "access": null,
     "description": null,
-    "lineNumber": 74,
+    "lineNumber": 63,
     "undocument": true,
     "unknown": [
       {
@@ -346,7 +629,7 @@
     }
   },
   {
-    "__docId__": 14,
+    "__docId__": 25,
     "kind": "member",
     "name": "_isAbortable",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -354,7 +637,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#_isAbortable",
     "access": null,
     "description": null,
-    "lineNumber": 84,
+    "lineNumber": 69,
     "undocument": true,
     "unknown": [
       {
@@ -369,76 +652,7 @@
     }
   },
   {
-    "__docId__": 15,
-    "kind": "member",
-    "name": "_serverRequest",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
-    "access": null,
-    "description": null,
-    "lineNumber": 85,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 16,
-    "kind": "member",
-    "name": "_serverRequest",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
-    "access": null,
-    "description": null,
-    "lineNumber": 90,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 17,
-    "kind": "member",
-    "name": "_serverRequest",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
-    "access": null,
-    "description": null,
-    "lineNumber": 94,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 18,
+    "__docId__": 26,
     "kind": "method",
     "name": "_updateRequest",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -448,7 +662,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#_updateRequest",
     "access": null,
     "description": null,
-    "lineNumber": 101,
+    "lineNumber": 73,
     "undocument": true,
     "unknown": [
       {
@@ -486,7 +700,7 @@
     }
   },
   {
-    "__docId__": 19,
+    "__docId__": 27,
     "kind": "method",
     "name": "getAll",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -496,7 +710,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#getAll",
     "access": null,
     "description": "Fetch all data",
-    "lineNumber": 121,
+    "lineNumber": 93,
     "unknown": [
       {
         "tagName": "@returns",
@@ -529,7 +743,7 @@
     }
   },
   {
-    "__docId__": 20,
+    "__docId__": 28,
     "kind": "method",
     "name": "getById",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -539,6 +753,92 @@
     "longname": "src/AjaxResource.js~AjaxResource#getById",
     "access": null,
     "description": "Get Single Element Data",
+    "lineNumber": 108,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<Object>}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "id",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 29,
+    "kind": "method",
+    "name": "create",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#create",
+    "access": null,
+    "description": "Send data to server",
+    "lineNumber": 123,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{Promise.<Object>}"
+      },
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "Object"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "formData",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise.<Object>"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 30,
+    "kind": "method",
+    "name": "update",
+    "memberof": "src/AjaxResource.js~AjaxResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/AjaxResource.js~AjaxResource#update",
+    "access": null,
+    "description": "Update data on server",
     "lineNumber": 136,
     "unknown": [
       {
@@ -560,92 +860,6 @@
         "optional": false,
         "name": "id",
         "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Promise.<Object>"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 21,
-    "kind": "method",
-    "name": "create",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#create",
-    "access": null,
-    "description": "Send data to server",
-    "lineNumber": 151,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{Promise.<Object>}"
-      },
-      {
-        "tagName": "@memberOf",
-        "tagValue": "AjaxResource"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "Object"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "formData",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Promise.<Object>"
-      ],
-      "spread": false,
-      "description": ""
-    }
-  },
-  {
-    "__docId__": 22,
-    "kind": "method",
-    "name": "update",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#update",
-    "access": null,
-    "description": "Update data on server",
-    "lineNumber": 164,
-    "unknown": [
-      {
-        "tagName": "@returns",
-        "tagValue": "{Promise.<Object>}"
-      },
-      {
-        "tagName": "@memberOf",
-        "tagValue": "AjaxResource"
-      }
-    ],
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "string"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "id",
-        "description": ""
       },
       {
         "nullable": null,
@@ -668,7 +882,7 @@
     }
   },
   {
-    "__docId__": 23,
+    "__docId__": 31,
     "kind": "method",
     "name": "remove",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -678,7 +892,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#remove",
     "access": null,
     "description": "Remove data by id",
-    "lineNumber": 176,
+    "lineNumber": 148,
     "unknown": [
       {
         "tagName": "@returns",
@@ -711,7 +925,7 @@
     }
   },
   {
-    "__docId__": 24,
+    "__docId__": 32,
     "kind": "method",
     "name": "getId",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -721,7 +935,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#getId",
     "access": null,
     "description": "Returns identifier of the object",
-    "lineNumber": 191,
+    "lineNumber": 163,
     "unknown": [
       {
         "tagName": "@returns",
@@ -754,7 +968,7 @@
     }
   },
   {
-    "__docId__": 25,
+    "__docId__": 33,
     "kind": "method",
     "name": "abort",
     "memberof": "src/AjaxResource.js~AjaxResource",
@@ -764,7 +978,7 @@
     "longname": "src/AjaxResource.js~AjaxResource#abort",
     "access": null,
     "description": "Cancels current request",
-    "lineNumber": 201,
+    "lineNumber": 173,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -774,15 +988,102 @@
     "params": []
   },
   {
-    "__docId__": 26,
-    "kind": "member",
-    "name": "_serverRequest",
-    "memberof": "src/AjaxResource.js~AjaxResource",
-    "static": false,
-    "longname": "src/AjaxResource.js~AjaxResource#_serverRequest",
+    "__docId__": 34,
+    "kind": "file",
+    "name": "src/RelationResource.js",
+    "content": "",
+    "static": true,
+    "longname": "src/RelationResource.js",
     "access": null,
     "description": null,
-    "lineNumber": 204,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 35,
+    "kind": "class",
+    "name": "RelationResource",
+    "memberof": "src/RelationResource.js",
+    "static": true,
+    "longname": "src/RelationResource.js~RelationResource",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/RelationResource.js",
+    "importStyle": null,
+    "description": "Ajax loader for relation cells",
+    "lineNumber": 12,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "RelationResource"
+      }
+    ],
+    "interface": false
+  },
+  {
+    "__docId__": 36,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#constructor",
+    "access": null,
+    "description": "Creates an instance of AjaxResource.",
+    "lineNumber": 23,
+    "unknown": [
+      {
+        "tagName": "@memberOf",
+        "tagValue": "AjaxResource"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "apiUrl",
+        "description": "resource url"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "object"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "{}",
+        "defaultRaw": {},
+        "name": "ajaxOptions",
+        "description": "options passed to $.ajax"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "any"
+        ],
+        "spread": false,
+        "optional": true,
+        "defaultValue": "$.ajax",
+        "defaultRaw": "$.ajax",
+        "name": "requestor",
+        "description": "alternative to $.ajax"
+      }
+    ]
+  },
+  {
+    "__docId__": 37,
+    "kind": "member",
+    "name": "_reject",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_reject",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
     "undocument": true,
     "unknown": [
       {
@@ -797,7 +1098,784 @@
     }
   },
   {
-    "__docId__": 27,
+    "__docId__": 38,
+    "kind": "member",
+    "name": "_resolve",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_resolve",
+    "access": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 39,
+    "kind": "member",
+    "name": "_timeout",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_timeout",
+    "access": null,
+    "description": null,
+    "lineNumber": 26,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 40,
+    "kind": "member",
+    "name": "_requestPromise",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_requestPromise",
+    "access": null,
+    "description": null,
+    "lineNumber": 27,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 41,
+    "kind": "member",
+    "name": "_key",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_key",
+    "access": null,
+    "description": null,
+    "lineNumber": 29,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 42,
+    "kind": "member",
+    "name": "_value",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_value",
+    "access": null,
+    "description": null,
+    "lineNumber": 30,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 43,
+    "kind": "member",
+    "name": "keys",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#keys",
+    "access": null,
+    "description": null,
+    "lineNumber": 32,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 44,
+    "kind": "member",
+    "name": "promise",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#promise",
+    "access": null,
+    "description": null,
+    "lineNumber": 33,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 45,
+    "kind": "member",
+    "name": "apiUrl",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#apiUrl",
+    "access": null,
+    "description": null,
+    "lineNumber": 34,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 46,
+    "kind": "member",
+    "name": "_ajaxLoader",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_ajaxLoader",
+    "access": null,
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 47,
+    "kind": "member",
+    "name": "_makeQuery",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_makeQuery",
+    "access": null,
+    "description": null,
+    "lineNumber": 38,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 48,
+    "kind": "member",
+    "name": "_makeMap",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_makeMap",
+    "access": null,
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 49,
+    "kind": "method",
+    "name": "_makeUrl",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_makeUrl",
+    "access": null,
+    "description": null,
+    "lineNumber": 52,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "url",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "query",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "string"
+      ]
+    }
+  },
+  {
+    "__docId__": 50,
+    "kind": "method",
+    "name": "_createPromise",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_createPromise",
+    "access": null,
+    "description": null,
+    "lineNumber": 64,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 51,
+    "kind": "member",
+    "name": "_resolve",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_resolve",
+    "access": null,
+    "description": null,
+    "lineNumber": 66,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 52,
+    "kind": "member",
+    "name": "_reject",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_reject",
+    "access": null,
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 53,
+    "kind": "method",
+    "name": "_requestData",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_requestData",
+    "access": null,
+    "description": null,
+    "lineNumber": 71,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 54,
+    "kind": "member",
+    "name": "keys",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#keys",
+    "access": null,
+    "description": null,
+    "lineNumber": 76,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*[]"
+      ]
+    }
+  },
+  {
+    "__docId__": 55,
+    "kind": "member",
+    "name": "promise",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#promise",
+    "access": null,
+    "description": null,
+    "lineNumber": 79,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "member",
+    "name": "_requestPromise",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_requestPromise",
+    "access": null,
+    "description": null,
+    "lineNumber": 80,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 57,
+    "kind": "member",
+    "name": "_requestPromise",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_requestPromise",
+    "access": null,
+    "description": null,
+    "lineNumber": 90,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 58,
+    "kind": "method",
+    "name": "setKeyValue",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#setKeyValue",
+    "access": null,
+    "description": null,
+    "lineNumber": 95,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "value",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "key",
+        "optional": true,
+        "types": [
+          "string"
+        ],
+        "defaultRaw": "id",
+        "defaultValue": "id"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 59,
+    "kind": "member",
+    "name": "_value",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_value",
+    "access": null,
+    "description": null,
+    "lineNumber": 96,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 60,
+    "kind": "member",
+    "name": "_key",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_key",
+    "access": null,
+    "description": null,
+    "lineNumber": 97,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 61,
+    "kind": "method",
+    "name": "onBeforeQuery",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#onBeforeQuery",
+    "access": null,
+    "description": null,
+    "lineNumber": 101,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "fn",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 62,
+    "kind": "member",
+    "name": "_makeQuery",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_makeQuery",
+    "access": null,
+    "description": null,
+    "lineNumber": 102,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 63,
+    "kind": "method",
+    "name": "onDataLoad",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#onDataLoad",
+    "access": null,
+    "description": null,
+    "lineNumber": 106,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "fn",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 64,
+    "kind": "member",
+    "name": "_makeMap",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_makeMap",
+    "access": null,
+    "description": null,
+    "lineNumber": 107,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 65,
+    "kind": "method",
+    "name": "load",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#load",
+    "access": null,
+    "description": null,
+    "lineNumber": 111,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "key",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 66,
+    "kind": "member",
+    "name": "_timeout",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_timeout",
+    "access": null,
+    "description": null,
+    "lineNumber": 116,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 67,
+    "kind": "member",
+    "name": "_timeout",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#_timeout",
+    "access": null,
+    "description": null,
+    "lineNumber": 118,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 68,
+    "kind": "method",
+    "name": "abort",
+    "memberof": "src/RelationResource.js~RelationResource",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/RelationResource.js~RelationResource#abort",
+    "access": null,
+    "description": null,
+    "lineNumber": 124,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 69,
     "kind": "file",
     "name": "src/TableBuilder.js",
     "content": "",
@@ -808,7 +1886,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 28,
+    "__docId__": 70,
     "kind": "class",
     "name": "TableBuilder",
     "memberof": "src/TableBuilder.js",
@@ -819,7 +1897,7 @@
     "importPath": "prg-editor/src/TableBuilder.js",
     "importStyle": "TableBuilder",
     "description": "Table columns configurator",
-    "lineNumber": 13,
+    "lineNumber": 14,
     "unknown": [
       {
         "tagName": "@class",
@@ -829,7 +1907,7 @@
     "interface": false
   },
   {
-    "__docId__": 29,
+    "__docId__": 71,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/TableBuilder.js~TableBuilder",
@@ -839,7 +1917,7 @@
     "longname": "src/TableBuilder.js~TableBuilder#constructor",
     "access": null,
     "description": "Creates an instance of TableBuilder.",
-    "lineNumber": 20,
+    "lineNumber": 21,
     "params": [
       {
         "nullable": null,
@@ -856,7 +1934,7 @@
     ]
   },
   {
-    "__docId__": 30,
+    "__docId__": 72,
     "kind": "member",
     "name": "cols",
     "memberof": "src/TableBuilder.js~TableBuilder",
@@ -864,7 +1942,7 @@
     "longname": "src/TableBuilder.js~TableBuilder#cols",
     "access": null,
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 22,
     "undocument": true,
     "unknown": [
       {
@@ -879,7 +1957,7 @@
     }
   },
   {
-    "__docId__": 31,
+    "__docId__": 73,
     "kind": "member",
     "name": "translator",
     "memberof": "src/TableBuilder.js~TableBuilder",
@@ -887,7 +1965,7 @@
     "longname": "src/TableBuilder.js~TableBuilder#translator",
     "access": null,
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "undocument": true,
     "unknown": [
       {
@@ -902,7 +1980,7 @@
     }
   },
   {
-    "__docId__": 32,
+    "__docId__": 74,
     "kind": "method",
     "name": "addText",
     "memberof": "src/TableBuilder.js~TableBuilder",
@@ -915,7 +1993,7 @@
     "examples": [
       "tableBuilder.addText('name', t('Name'))\n     .orderBy()\n     .orderByDefault();"
     ],
-    "lineNumber": 39,
+    "lineNumber": 40,
     "unknown": [
       {
         "tagName": "@returns",
@@ -958,7 +2036,7 @@
     }
   },
   {
-    "__docId__": 33,
+    "__docId__": 75,
     "kind": "method",
     "name": "addAction",
     "memberof": "src/TableBuilder.js~TableBuilder",
@@ -971,7 +2049,7 @@
     "examples": [
       "tableBuilder.addAction('id', t('Remove'))\n     .onClick((e, data) => this.tableEditor.delete(data))\n     .condition((id, data) => acl.isAllowed('users.remove') && data.isAdministrable);"
     ],
-    "lineNumber": 58,
+    "lineNumber": 59,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1014,7 +2092,59 @@
     }
   },
   {
-    "__docId__": 34,
+    "__docId__": 76,
+    "kind": "method",
+    "name": "addRelationCell",
+    "memberof": "src/TableBuilder.js~TableBuilder",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/TableBuilder.js~TableBuilder#addRelationCell",
+    "access": null,
+    "description": "Adds relation cell to table",
+    "examples": [
+      "tableBuilder.addAction('userId', 'User name')\n    .setResource('/api/users', 'name', 'id');"
+    ],
+    "lineNumber": 76,
+    "unknown": [
+      {
+        "tagName": "@returns",
+        "tagValue": "{RelationCellConfigurator}"
+      }
+    ],
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "attr",
+        "description": "attribute name"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "name",
+        "description": "column name"
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "RelationCellConfigurator"
+      ],
+      "spread": false,
+      "description": ""
+    }
+  },
+  {
+    "__docId__": 77,
     "kind": "method",
     "name": "getColsConfig",
     "memberof": "src/TableBuilder.js~TableBuilder",
@@ -1024,7 +2154,7 @@
     "longname": "src/TableBuilder.js~TableBuilder#getColsConfig",
     "access": null,
     "description": "Returns the column configuration for {TableEditor}",
-    "lineNumber": 71,
+    "lineNumber": 89,
     "unknown": [
       {
         "tagName": "@returns",
@@ -1046,7 +2176,7 @@
     }
   },
   {
-    "__docId__": 35,
+    "__docId__": 78,
     "kind": "file",
     "name": "src/cells/ActionCellConfigurator.js",
     "content": "",
@@ -1057,7 +2187,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 36,
+    "__docId__": 79,
     "kind": "class",
     "name": "ActionCellConfigurator",
     "memberof": "src/cells/ActionCellConfigurator.js",
@@ -1081,7 +2211,7 @@
     ]
   },
   {
-    "__docId__": 37,
+    "__docId__": 80,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
@@ -1123,7 +2253,7 @@
     ]
   },
   {
-    "__docId__": 38,
+    "__docId__": 81,
     "kind": "method",
     "name": "condition",
     "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
@@ -1166,7 +2296,7 @@
     }
   },
   {
-    "__docId__": 39,
+    "__docId__": 82,
     "kind": "method",
     "name": "href",
     "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
@@ -1209,7 +2339,7 @@
     }
   },
   {
-    "__docId__": 40,
+    "__docId__": 83,
     "kind": "method",
     "name": "label",
     "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
@@ -1253,7 +2383,7 @@
     }
   },
   {
-    "__docId__": 41,
+    "__docId__": 84,
     "kind": "method",
     "name": "onClick",
     "memberof": "src/cells/ActionCellConfigurator.js~ActionCellConfigurator",
@@ -1296,7 +2426,7 @@
     }
   },
   {
-    "__docId__": 42,
+    "__docId__": 85,
     "kind": "file",
     "name": "src/cells/BaseCellConfigurator.js",
     "content": "",
@@ -1307,7 +2437,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 43,
+    "__docId__": 86,
     "kind": "class",
     "name": "BaseCellConfigurator",
     "memberof": "src/cells/BaseCellConfigurator.js",
@@ -1328,7 +2458,7 @@
     "interface": false
   },
   {
-    "__docId__": 44,
+    "__docId__": 87,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
@@ -1375,7 +2505,7 @@
     ]
   },
   {
-    "__docId__": 45,
+    "__docId__": 88,
     "kind": "member",
     "name": "translator",
     "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
@@ -1398,7 +2528,7 @@
     }
   },
   {
-    "__docId__": 46,
+    "__docId__": 89,
     "kind": "member",
     "name": "config",
     "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
@@ -1421,7 +2551,7 @@
     }
   },
   {
-    "__docId__": 47,
+    "__docId__": 90,
     "kind": "method",
     "name": "map",
     "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
@@ -1460,7 +2590,7 @@
     }
   },
   {
-    "__docId__": 48,
+    "__docId__": 91,
     "kind": "method",
     "name": "orderBy",
     "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
@@ -1511,7 +2641,7 @@
     }
   },
   {
-    "__docId__": 49,
+    "__docId__": 92,
     "kind": "method",
     "name": "orderByDefault",
     "memberof": "src/cells/BaseCellConfigurator.js~BaseCellConfigurator",
@@ -1539,7 +2669,195 @@
     }
   },
   {
-    "__docId__": 50,
+    "__docId__": 93,
+    "kind": "file",
+    "name": "src/cells/RelationCellConfigurator.js",
+    "content": "",
+    "static": true,
+    "longname": "src/cells/RelationCellConfigurator.js",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 94,
+    "kind": "class",
+    "name": "RelationCellConfigurator",
+    "memberof": "src/cells/RelationCellConfigurator.js",
+    "static": true,
+    "longname": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator",
+    "access": null,
+    "export": false,
+    "importPath": "prg-editor/src/cells/RelationCellConfigurator.js",
+    "importStyle": null,
+    "description": "Inserts cell, which fetches value from remote API by its ID",
+    "lineNumber": 14,
+    "unknown": [
+      {
+        "tagName": "@class",
+        "tagValue": "RelationCellConfigurator"
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "src/cells/BaseCellConfigurator.js~BaseCellConfigurator"
+    ]
+  },
+  {
+    "__docId__": 95,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 16,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "attr",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "name",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "translator",
+        "optional": true,
+        "types": [
+          "undefined"
+        ],
+        "defaultValue": "undefined"
+      }
+    ]
+  },
+  {
+    "__docId__": 96,
+    "kind": "method",
+    "name": "setResource",
+    "memberof": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator#setResource",
+    "access": null,
+    "description": "Sets resource API",
+    "lineNumber": 35,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "string",
+          "RelationResource"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "resource",
+        "description": "the relation resource"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "string"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "value",
+        "description": "name of value attribute"
+      },
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "key",
+        "description": "the idetifier attribute"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 97,
+    "kind": "method",
+    "name": "setLoader",
+    "memberof": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator#setLoader",
+    "access": null,
+    "description": "Sets loader",
+    "lineNumber": 53,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "loader",
+        "description": "text or component"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 98,
+    "kind": "method",
+    "name": "setErrorContent",
+    "memberof": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/cells/RelationCellConfigurator.js~RelationCellConfigurator#setErrorContent",
+    "access": null,
+    "description": "Sets content, when loading fails",
+    "lineNumber": 63,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "*"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "error",
+        "description": "Error text or component"
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 99,
     "kind": "file",
     "name": "src/cells/TextCellConfigurator.js",
     "content": "",
@@ -1550,7 +2868,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 51,
+    "__docId__": 100,
     "kind": "class",
     "name": "TextCellConfigurator",
     "memberof": "src/cells/TextCellConfigurator.js",
@@ -1574,7 +2892,7 @@
     ]
   },
   {
-    "__docId__": 52,
+    "__docId__": 101,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/cells/TextCellConfigurator.js~TextCellConfigurator",
@@ -1616,7 +2934,7 @@
     ]
   },
   {
-    "__docId__": 53,
+    "__docId__": 102,
     "kind": "file",
     "name": "src/components/AjaxErrorMessage.jsx",
     "content": "",
@@ -1627,7 +2945,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 54,
+    "__docId__": 103,
     "kind": "class",
     "name": "AjaxErrorMessage",
     "memberof": "src/components/AjaxErrorMessage.jsx",
@@ -1637,168 +2955,6 @@
     "export": true,
     "importPath": "prg-editor/src/components/AjaxErrorMessage.jsx",
     "importStyle": "AjaxErrorMessage",
-    "description": null,
-    "lineNumber": 9,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "interface": false,
-    "extends": [
-      "react~Component"
-    ]
-  },
-  {
-    "__docId__": 55,
-    "kind": "constructor",
-    "name": "constructor",
-    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#constructor",
-    "access": null,
-    "description": null,
-    "lineNumber": 11,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [
-      {
-        "name": "props",
-        "types": [
-          "*"
-        ]
-      }
-    ]
-  },
-  {
-    "__docId__": 56,
-    "kind": "member",
-    "name": "state",
-    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
-    "static": false,
-    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#state",
-    "access": null,
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "{\"error\": *}"
-      ]
-    }
-  },
-  {
-    "__docId__": 57,
-    "kind": "method",
-    "name": "onTryAgain",
-    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#onTryAgain",
-    "access": null,
-    "description": null,
-    "lineNumber": 18,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": []
-  },
-  {
-    "__docId__": 58,
-    "kind": "method",
-    "name": "showError",
-    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#showError",
-    "access": null,
-    "description": null,
-    "lineNumber": 23,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [
-      {
-        "name": "jqXHR",
-        "types": [
-          "*"
-        ]
-      }
-    ]
-  },
-  {
-    "__docId__": 59,
-    "kind": "method",
-    "name": "render",
-    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#render",
-    "access": null,
-    "description": null,
-    "lineNumber": 27,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 60,
-    "kind": "file",
-    "name": "src/components/DeleteConfirmator.jsx",
-    "content": "",
-    "static": true,
-    "longname": "src/components/DeleteConfirmator.jsx",
-    "access": null,
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 61,
-    "kind": "class",
-    "name": "DeleteConfirmator",
-    "memberof": "src/components/DeleteConfirmator.jsx",
-    "static": true,
-    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
-    "access": null,
-    "export": true,
-    "importPath": "prg-editor/src/components/DeleteConfirmator.jsx",
-    "importStyle": "DeleteConfirmator",
     "description": null,
     "lineNumber": 10,
     "undocument": true,
@@ -1814,14 +2970,14 @@
     ]
   },
   {
-    "__docId__": 62,
+    "__docId__": 104,
     "kind": "constructor",
     "name": "constructor",
-    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
     "generator": false,
     "async": false,
     "static": false,
-    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#constructor",
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#constructor",
     "access": null,
     "description": null,
     "lineNumber": 12,
@@ -1842,7 +2998,169 @@
     ]
   },
   {
-    "__docId__": 63,
+    "__docId__": 105,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 14,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"error\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 106,
+    "kind": "method",
+    "name": "onTryAgain",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#onTryAgain",
+    "access": null,
+    "description": null,
+    "lineNumber": 19,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 107,
+    "kind": "method",
+    "name": "showError",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#showError",
+    "access": null,
+    "description": null,
+    "lineNumber": 24,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "jqXHR",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 108,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/AjaxErrorMessage.jsx~AjaxErrorMessage#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 28,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 109,
+    "kind": "file",
+    "name": "src/components/DeleteConfirmator.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/DeleteConfirmator.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 110,
+    "kind": "class",
+    "name": "DeleteConfirmator",
+    "memberof": "src/components/DeleteConfirmator.jsx",
+    "static": true,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/DeleteConfirmator.jsx",
+    "importStyle": "DeleteConfirmator",
+    "description": null,
+    "lineNumber": 11,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 111,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 112,
     "kind": "member",
     "name": "serverRequest",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1850,7 +3168,7 @@
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#serverRequest",
     "access": null,
     "description": null,
-    "lineNumber": 16,
+    "lineNumber": 17,
     "undocument": true,
     "unknown": [
       {
@@ -1865,7 +3183,7 @@
     }
   },
   {
-    "__docId__": 64,
+    "__docId__": 113,
     "kind": "member",
     "name": "errorHandler",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1873,7 +3191,7 @@
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#errorHandler",
     "access": null,
     "description": null,
-    "lineNumber": 18,
+    "lineNumber": 19,
     "undocument": true,
     "unknown": [
       {
@@ -1888,7 +3206,7 @@
     }
   },
   {
-    "__docId__": 65,
+    "__docId__": 114,
     "kind": "member",
     "name": "state",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1896,7 +3214,7 @@
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#state",
     "access": null,
     "description": null,
-    "lineNumber": 20,
+    "lineNumber": 21,
     "undocument": true,
     "unknown": [
       {
@@ -1911,7 +3229,7 @@
     }
   },
   {
-    "__docId__": 66,
+    "__docId__": 115,
     "kind": "member",
     "name": "resource",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1919,7 +3237,7 @@
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#resource",
     "access": null,
     "description": null,
-    "lineNumber": 25,
+    "lineNumber": 26,
     "undocument": true,
     "unknown": [
       {
@@ -1934,7 +3252,7 @@
     }
   },
   {
-    "__docId__": 67,
+    "__docId__": 116,
     "kind": "member",
     "name": "resource",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1942,7 +3260,7 @@
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#resource",
     "access": null,
     "description": null,
-    "lineNumber": 27,
+    "lineNumber": 28,
     "undocument": true,
     "unknown": [
       {
@@ -1957,7 +3275,7 @@
     }
   },
   {
-    "__docId__": 68,
+    "__docId__": 117,
     "kind": "member",
     "name": "mounted",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1965,7 +3283,7 @@
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#mounted",
     "access": null,
     "description": null,
-    "lineNumber": 30,
+    "lineNumber": 31,
     "undocument": true,
     "unknown": [
       {
@@ -1980,7 +3298,7 @@
     }
   },
   {
-    "__docId__": 69,
+    "__docId__": 118,
     "kind": "method",
     "name": "componentWillUnmount",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -1988,25 +3306,6 @@
     "async": false,
     "static": false,
     "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#componentWillUnmount",
-    "access": null,
-    "description": null,
-    "lineNumber": 33,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": []
-  },
-  {
-    "__docId__": 70,
-    "kind": "member",
-    "name": "mounted",
-    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
-    "static": false,
-    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#mounted",
     "access": null,
     "description": null,
     "lineNumber": 34,
@@ -2017,6 +3316,25 @@
         "tagValue": ""
       }
     ],
+    "params": []
+  },
+  {
+    "__docId__": 119,
+    "kind": "member",
+    "name": "mounted",
+    "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
+    "static": false,
+    "longname": "src/components/DeleteConfirmator.jsx~DeleteConfirmator#mounted",
+    "access": null,
+    "description": null,
+    "lineNumber": 35,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
     "type": {
       "types": [
         "boolean"
@@ -2024,7 +3342,7 @@
     }
   },
   {
-    "__docId__": 71,
+    "__docId__": 120,
     "kind": "method",
     "name": "onAjaxError",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2052,7 +3370,7 @@
     ]
   },
   {
-    "__docId__": 72,
+    "__docId__": 121,
     "kind": "member",
     "name": "serverRequest",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2075,7 +3393,7 @@
     }
   },
   {
-    "__docId__": 73,
+    "__docId__": 122,
     "kind": "method",
     "name": "onAjaxSuccess",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2103,7 +3421,7 @@
     ]
   },
   {
-    "__docId__": 74,
+    "__docId__": 123,
     "kind": "member",
     "name": "serverRequest",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2126,7 +3444,7 @@
     }
   },
   {
-    "__docId__": 75,
+    "__docId__": 124,
     "kind": "method",
     "name": "onConfirm",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2147,7 +3465,7 @@
     "params": []
   },
   {
-    "__docId__": 76,
+    "__docId__": 125,
     "kind": "method",
     "name": "renderError",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2173,7 +3491,7 @@
     }
   },
   {
-    "__docId__": 77,
+    "__docId__": 126,
     "kind": "member",
     "name": "errorHandler",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2196,7 +3514,7 @@
     }
   },
   {
-    "__docId__": 78,
+    "__docId__": 127,
     "kind": "method",
     "name": "render",
     "memberof": "src/components/DeleteConfirmator.jsx~DeleteConfirmator",
@@ -2222,7 +3540,7 @@
     }
   },
   {
-    "__docId__": 79,
+    "__docId__": 128,
     "kind": "file",
     "name": "src/components/Editor.jsx",
     "content": "",
@@ -2233,7 +3551,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 80,
+    "__docId__": 129,
     "kind": "class",
     "name": "Editor",
     "memberof": "src/components/Editor.jsx",
@@ -2257,7 +3575,7 @@
     ]
   },
   {
-    "__docId__": 81,
+    "__docId__": 130,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2291,7 +3609,7 @@
     ]
   },
   {
-    "__docId__": 82,
+    "__docId__": 131,
     "kind": "member",
     "name": "errorHandler",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2314,7 +3632,7 @@
     }
   },
   {
-    "__docId__": 83,
+    "__docId__": 132,
     "kind": "member",
     "name": "t",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2337,7 +3655,7 @@
     }
   },
   {
-    "__docId__": 84,
+    "__docId__": 133,
     "kind": "member",
     "name": "resource",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2360,7 +3678,7 @@
     }
   },
   {
-    "__docId__": 85,
+    "__docId__": 134,
     "kind": "member",
     "name": "resource",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2383,7 +3701,7 @@
     }
   },
   {
-    "__docId__": 86,
+    "__docId__": 135,
     "kind": "member",
     "name": "state",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2406,7 +3724,7 @@
     }
   },
   {
-    "__docId__": 87,
+    "__docId__": 136,
     "kind": "method",
     "name": "componentWillMount",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2427,7 +3745,7 @@
     "params": []
   },
   {
-    "__docId__": 88,
+    "__docId__": 137,
     "kind": "method",
     "name": "componentWillUnmount",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2448,7 +3766,7 @@
     "params": []
   },
   {
-    "__docId__": 89,
+    "__docId__": 138,
     "kind": "method",
     "name": "onDataLoad",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2476,7 +3794,7 @@
     ]
   },
   {
-    "__docId__": 90,
+    "__docId__": 139,
     "kind": "method",
     "name": "onDataLoadError",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2504,7 +3822,7 @@
     ]
   },
   {
-    "__docId__": 91,
+    "__docId__": 140,
     "kind": "method",
     "name": "onSubmit",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2532,7 +3850,7 @@
     ]
   },
   {
-    "__docId__": 92,
+    "__docId__": 141,
     "kind": "method",
     "name": "onValidationFailed",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2553,7 +3871,7 @@
     "params": []
   },
   {
-    "__docId__": 93,
+    "__docId__": 142,
     "kind": "method",
     "name": "onBeforeValidate",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2581,7 +3899,7 @@
     ]
   },
   {
-    "__docId__": 94,
+    "__docId__": 143,
     "kind": "method",
     "name": "onAjaxError",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2609,7 +3927,7 @@
     ]
   },
   {
-    "__docId__": 95,
+    "__docId__": 144,
     "kind": "method",
     "name": "onAjaxSuccess",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2637,7 +3955,7 @@
     ]
   },
   {
-    "__docId__": 96,
+    "__docId__": 145,
     "kind": "member",
     "name": "serverRequest",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2660,7 +3978,7 @@
     }
   },
   {
-    "__docId__": 97,
+    "__docId__": 146,
     "kind": "method",
     "name": "onClosed",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2681,7 +3999,7 @@
     "params": []
   },
   {
-    "__docId__": 98,
+    "__docId__": 147,
     "kind": "method",
     "name": "getContext",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2707,7 +4025,7 @@
     }
   },
   {
-    "__docId__": 99,
+    "__docId__": 148,
     "kind": "method",
     "name": "loadData",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2738,7 +4056,7 @@
     ]
   },
   {
-    "__docId__": 100,
+    "__docId__": 149,
     "kind": "method",
     "name": "renderError",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2764,7 +4082,7 @@
     }
   },
   {
-    "__docId__": 101,
+    "__docId__": 150,
     "kind": "member",
     "name": "errorHandler",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2787,7 +4105,7 @@
     }
   },
   {
-    "__docId__": 102,
+    "__docId__": 151,
     "kind": "method",
     "name": "render",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2813,7 +4131,7 @@
     }
   },
   {
-    "__docId__": 103,
+    "__docId__": 152,
     "kind": "member",
     "name": "errorHandler",
     "memberof": "src/components/Editor.jsx~Editor",
@@ -2836,7 +4154,7 @@
     }
   },
   {
-    "__docId__": 104,
+    "__docId__": 153,
     "kind": "file",
     "name": "src/components/ErrorMessage.jsx",
     "content": "",
@@ -2847,7 +4165,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 105,
+    "__docId__": 154,
     "kind": "class",
     "name": "ErrorMessage",
     "memberof": "src/components/ErrorMessage.jsx",
@@ -2858,7 +4176,7 @@
     "importPath": "prg-editor/src/components/ErrorMessage.jsx",
     "importStyle": "ErrorMessage",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 8,
     "undocument": true,
     "unknown": [
       {
@@ -2868,11 +4186,11 @@
     ],
     "interface": false,
     "extends": [
-      "react~React.Component"
+      "react~Component"
     ]
   },
   {
-    "__docId__": 106,
+    "__docId__": 155,
     "kind": "method",
     "name": "onCloseRequested",
     "memberof": "src/components/ErrorMessage.jsx~ErrorMessage",
@@ -2882,7 +4200,7 @@
     "longname": "src/components/ErrorMessage.jsx~ErrorMessage#onCloseRequested",
     "access": null,
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 10,
     "undocument": true,
     "unknown": [
       {
@@ -2893,7 +4211,7 @@
     "params": []
   },
   {
-    "__docId__": 107,
+    "__docId__": 156,
     "kind": "method",
     "name": "render",
     "memberof": "src/components/ErrorMessage.jsx~ErrorMessage",
@@ -2903,7 +4221,7 @@
     "longname": "src/components/ErrorMessage.jsx~ErrorMessage#render",
     "access": null,
     "description": null,
-    "lineNumber": 15,
+    "lineNumber": 16,
     "undocument": true,
     "unknown": [
       {
@@ -2919,7 +4237,7 @@
     }
   },
   {
-    "__docId__": 108,
+    "__docId__": 157,
     "kind": "file",
     "name": "src/components/Modal.jsx",
     "content": "",
@@ -2930,7 +4248,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 109,
+    "__docId__": 158,
     "kind": "function",
     "name": "Modal",
     "memberof": "src/components/Modal.jsx",
@@ -2946,7 +4264,7 @@
     "examples": [
       "import { Modal } from 'prg-editor';\n\n// basic usage\n<Modal\n    title=\"Alert\"\n    onClose={() => console.log('please close me')}\n>\n     <p className=\"title\">Something Interesting!</p>\n</Modal>\n\n\n// providing own body\n<Modal\n    title=\"Alert\"\n    onClose={() => console.log('please close me')}\n    customBody\n>\n     <form>\n         <section className=\"modal-card-body\">\n             <input name=\"input\" />\n         </section>\n         <footer className=\"modal-card-foot\">\n             <button>Submit</button>\n         </footer>\n     </form>\n</Modal>"
     ],
-    "lineNumber": 50,
+    "lineNumber": 51,
     "unknown": [
       {
         "tagName": "@returns",
@@ -2975,7 +4293,7 @@
     }
   },
   {
-    "__docId__": 110,
+    "__docId__": 159,
     "kind": "file",
     "name": "src/components/Paginator.jsx",
     "content": "",
@@ -2986,7 +4304,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 111,
+    "__docId__": 160,
     "kind": "function",
     "name": "Paginator",
     "memberof": "src/components/Paginator.jsx",
@@ -2998,53 +4316,6 @@
     "export": true,
     "importPath": "prg-editor/src/components/Paginator.jsx",
     "importStyle": "Paginator",
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [
-      {
-        "name": "props",
-        "types": [
-          "*"
-        ]
-      }
-    ],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 112,
-    "kind": "file",
-    "name": "src/components/Row.jsx",
-    "content": "",
-    "static": true,
-    "longname": "src/components/Row.jsx",
-    "access": null,
-    "description": null,
-    "lineNumber": 1
-  },
-  {
-    "__docId__": 113,
-    "kind": "function",
-    "name": "Row",
-    "memberof": "src/components/Row.jsx",
-    "generator": false,
-    "async": false,
-    "static": true,
-    "longname": "src/components/Row.jsx~Row",
-    "access": null,
-    "export": true,
-    "importPath": "prg-editor/src/components/Row.jsx",
-    "importStyle": "Row",
     "description": null,
     "lineNumber": 8,
     "undocument": true,
@@ -3069,130 +4340,54 @@
     }
   },
   {
-    "__docId__": 114,
+    "__docId__": 161,
     "kind": "file",
-    "name": "src/components/Spinner.jsx",
+    "name": "src/components/Row.jsx",
     "content": "",
     "static": true,
-    "longname": "src/components/Spinner.jsx",
+    "longname": "src/components/Row.jsx",
     "access": null,
     "description": null,
     "lineNumber": 1
   },
   {
-    "__docId__": 115,
-    "kind": "variable",
-    "name": "loading",
-    "memberof": "src/components/Spinner.jsx",
-    "static": true,
-    "longname": "src/components/Spinner.jsx~loading",
-    "access": null,
-    "export": false,
-    "importPath": "prg-editor/src/components/Spinner.jsx",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 7,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 116,
-    "kind": "variable",
-    "name": "styleSheet",
-    "memberof": "src/components/Spinner.jsx",
-    "static": true,
-    "longname": "src/components/Spinner.jsx~styleSheet",
-    "access": null,
-    "export": false,
-    "importPath": "prg-editor/src/components/Spinner.jsx",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 13,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 117,
-    "kind": "variable",
-    "name": "styles",
-    "memberof": "src/components/Spinner.jsx",
-    "static": true,
-    "longname": "src/components/Spinner.jsx~styles",
-    "access": null,
-    "export": false,
-    "importPath": "prg-editor/src/components/Spinner.jsx",
-    "importStyle": null,
-    "description": null,
-    "lineNumber": 25,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "{\"loaderContainer\": *, \"loading\": *, \"loadingBar\": *, \"n1\": *, \"n2\": *, \"n3\": *, \"n4\": *}"
-      ]
-    }
-  },
-  {
-    "__docId__": 118,
+    "__docId__": 162,
     "kind": "function",
-    "name": "Spinner",
-    "memberof": "src/components/Spinner.jsx",
+    "name": "Row",
+    "memberof": "src/components/Row.jsx",
     "generator": false,
     "async": false,
     "static": true,
-    "longname": "src/components/Spinner.jsx~Spinner",
+    "longname": "src/components/Row.jsx~Row",
     "access": null,
     "export": true,
-    "importPath": "prg-editor/src/components/Spinner.jsx",
-    "importStyle": "Spinner",
-    "description": "Just a Loader",
-    "examples": [
-      "// just as a dummy component\nimport { Spinner } from 'prg-editor';\n\n<Spinner />"
-    ],
-    "lineNumber": 65,
+    "importPath": "prg-editor/src/components/Row.jsx",
+    "importStyle": "Row",
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
     "unknown": [
       {
-        "tagName": "@returns",
-        "tagValue": "{ReactDom}"
+        "tagName": "@_undocument",
+        "tagValue": ""
       }
     ],
-    "params": [],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ],
     "return": {
-      "nullable": null,
       "types": [
-        "ReactDom"
-      ],
-      "spread": false,
-      "description": ""
+        "*"
+      ]
     }
   },
   {
-    "__docId__": 119,
+    "__docId__": 163,
     "kind": "file",
     "name": "src/components/Table.jsx",
     "content": "",
@@ -3203,7 +4398,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 120,
+    "__docId__": 164,
     "kind": "function",
     "name": "renderArrow",
     "memberof": "src/components/Table.jsx",
@@ -3216,7 +4411,7 @@
     "importPath": "prg-editor/src/components/Table.jsx",
     "importStyle": null,
     "description": null,
-    "lineNumber": 10,
+    "lineNumber": 11,
     "undocument": true,
     "unknown": [
       {
@@ -3239,7 +4434,7 @@
     }
   },
   {
-    "__docId__": 121,
+    "__docId__": 165,
     "kind": "class",
     "name": "Table",
     "memberof": "src/components/Table.jsx",
@@ -3250,7 +4445,7 @@
     "importPath": "prg-editor/src/components/Table.jsx",
     "importStyle": "Table",
     "description": null,
-    "lineNumber": 21,
+    "lineNumber": 22,
     "undocument": true,
     "unknown": [
       {
@@ -3260,11 +4455,11 @@
     ],
     "interface": false,
     "extends": [
-      "react~React.Component"
+      "react~Component"
     ]
   },
   {
-    "__docId__": 122,
+    "__docId__": 166,
     "kind": "method",
     "name": "orderBy",
     "memberof": "src/components/Table.jsx~Table",
@@ -3274,7 +4469,7 @@
     "longname": "src/components/Table.jsx~Table#orderBy",
     "access": null,
     "description": null,
-    "lineNumber": 23,
+    "lineNumber": 24,
     "undocument": true,
     "unknown": [
       {
@@ -3301,7 +4496,7 @@
     ]
   },
   {
-    "__docId__": 123,
+    "__docId__": 167,
     "kind": "method",
     "name": "renderHeaderColumn",
     "memberof": "src/components/Table.jsx~Table",
@@ -3311,7 +4506,7 @@
     "longname": "src/components/Table.jsx~Table#renderHeaderColumn",
     "access": null,
     "description": "Renders column of table header",
-    "lineNumber": 47,
+    "lineNumber": 48,
     "params": [
       {
         "nullable": null,
@@ -3341,7 +4536,7 @@
     }
   },
   {
-    "__docId__": 124,
+    "__docId__": 168,
     "kind": "method",
     "name": "renderHeader",
     "memberof": "src/components/Table.jsx~Table",
@@ -3351,7 +4546,7 @@
     "longname": "src/components/Table.jsx~Table#renderHeader",
     "access": null,
     "description": null,
-    "lineNumber": 75,
+    "lineNumber": 76,
     "undocument": true,
     "unknown": [
       {
@@ -3367,7 +4562,7 @@
     }
   },
   {
-    "__docId__": 125,
+    "__docId__": 169,
     "kind": "method",
     "name": "renderBody",
     "memberof": "src/components/Table.jsx~Table",
@@ -3377,7 +4572,7 @@
     "longname": "src/components/Table.jsx~Table#renderBody",
     "access": null,
     "description": null,
-    "lineNumber": 80,
+    "lineNumber": 81,
     "undocument": true,
     "unknown": [
       {
@@ -3393,7 +4588,7 @@
     }
   },
   {
-    "__docId__": 126,
+    "__docId__": 170,
     "kind": "method",
     "name": "render",
     "memberof": "src/components/Table.jsx~Table",
@@ -3403,7 +4598,7 @@
     "longname": "src/components/Table.jsx~Table#render",
     "access": null,
     "description": null,
-    "lineNumber": 99,
+    "lineNumber": 100,
     "undocument": true,
     "unknown": [
       {
@@ -3419,7 +4614,7 @@
     }
   },
   {
-    "__docId__": 127,
+    "__docId__": 171,
     "kind": "file",
     "name": "src/components/TableEditor.jsx",
     "content": "",
@@ -3430,7 +4625,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 128,
+    "__docId__": 172,
     "kind": "class",
     "name": "TableEditor",
     "memberof": "src/components/TableEditor.jsx",
@@ -3440,11 +4635,11 @@
     "export": true,
     "importPath": "prg-editor/src/components/TableEditor.jsx",
     "importStyle": "TableEditor",
-    "description": "Main datagrid component\nAccepts theese props:\n\n## Props\n\n| prop | type | description |\n|------|------|-------------|\n| `params` | `Object` | Initial data for query |\n| `colsConfig` | `Object[]` - **required** | output from {TableBuilder} to show in table\n| `resource` | `string|AjaxResource` - **required** | url of resource or {AjaxResource}\n| `t` | `function` | translator function (`word => word`)\n| `loadingErrorMessage` | `string` | string to show when loading fails\n| `deleteErrorMessage` | `string` | string to show in delete confirmation alert\n| `limit` | `number` | required number of entries\n| `disableAdd` | `boolean` | which determins to show an add button\n| `onParamsChange` | `function` | switches component to controlled state\n\n## Controlled TableEditor - managing state from the outside\n\nFor controlling component state you can provide `onParamsChange` prop and manually\nset the `params` property. So you can delegate controlling state to the React Router.",
+    "description": "Main datagrid component\nAccepts theese props:\n\n## Props\n\n| prop | type | description |\n|------|------|-------------|\n| `params` | `Object` | Initial data for query |\n| `colsConfig` | `Object[]` - **required** | output from {TableBuilder} to show in table\n| `resource` | `string|AjaxResource` - **required** | url of resource or {AjaxResource}\n| `t` | `function` | translator function (`word => word`)\n| `loadingErrorMessage` | `string` | string to show when loading fails\n| `deleteErrorMessage` | `string` | string to show in delete confirmation alert\n| `limit` | `number` | required number of entries\n| `disableAdd` | `boolean` | which determins to show an add button\n| `onParamsChange` | `function` | switches component to controlled state\n| `noPagination` | `boolean` | disables pagination\n\n## Controlled TableEditor - managing state from the outside\n\nFor controlling component state you can provide `onParamsChange` prop and manually\nset the `params` property. So you can delegate controlling state to the React Router.",
     "examples": [
       "<TableEditor\n    colsConfig={tableBuilder.getColsConfig()}\n    resource=\"/api/models/:id?someQuery=1\"\n>\n    <Editor\n        validator={validator}\n        context={{\n            create: validator.CONTEXT_CREATE,\n            update: validator.CONTEXT_UPDATE\n        }}\n    >\n        <Input name=\"text\" />\n    </Editor>\n</TableEditor>\n\n// or with filter form at the header\n<TableEditor\n    colsConfig={tableBuilder.getColsConfig()}\n    resource=\"/api/models/:id?someQuery=1\"\n>\n    <header>\n        <Input\n            name=\"search\"\n            placeholder=\"Search\"\n            controlClass=\"is-expanded\"\n            iconBefore={<i className=\"fa fa-search\" aria-hidden=\"true\" />}\n        />\n    </header>\n    <Editor\n        validator={validator}\n    >\n        <Input name=\"text\" />\n    </Editor>\n</TableEditor>"
     ],
-    "lineNumber": 75,
+    "lineNumber": 77,
     "unknown": [
       {
         "tagName": "@class",
@@ -3457,7 +4652,7 @@
     ]
   },
   {
-    "__docId__": 129,
+    "__docId__": 173,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3467,7 +4662,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#constructor",
     "access": null,
     "description": null,
-    "lineNumber": 77,
+    "lineNumber": 79,
     "undocument": true,
     "unknown": [
       {
@@ -3485,35 +4680,12 @@
     ]
   },
   {
-    "__docId__": 130,
+    "__docId__": 174,
     "kind": "member",
     "name": "serverRequest",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
     "static": false,
     "longname": "src/components/TableEditor.jsx~TableEditor#serverRequest",
-    "access": null,
-    "description": null,
-    "lineNumber": 80,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 131,
-    "kind": "member",
-    "name": "headerForm",
-    "memberof": "src/components/TableEditor.jsx~TableEditor",
-    "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#headerForm",
     "access": null,
     "description": null,
     "lineNumber": 82,
@@ -3531,12 +4703,12 @@
     }
   },
   {
-    "__docId__": 132,
+    "__docId__": 175,
     "kind": "member",
-    "name": "errorHandler",
+    "name": "headerForm",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
     "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
+    "longname": "src/components/TableEditor.jsx~TableEditor#headerForm",
     "access": null,
     "description": null,
     "lineNumber": 84,
@@ -3554,38 +4726,15 @@
     }
   },
   {
-    "__docId__": 133,
+    "__docId__": 176,
     "kind": "member",
-    "name": "state",
+    "name": "errorHandler",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
     "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#state",
+    "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
     "access": null,
     "description": null,
     "lineNumber": 86,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "type": {
-      "types": [
-        "{\"editorOpened\": *, \"confirmingRemove\": *, \"loading\": boolean, \"data\": *, \"params\": *, \"nextOffset\": *, \"editData\": *, \"editId\": *, \"deleteId\": *, \"filterChanged\": *}"
-      ]
-    }
-  },
-  {
-    "__docId__": 134,
-    "kind": "member",
-    "name": "resource",
-    "memberof": "src/components/TableEditor.jsx~TableEditor",
-    "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#resource",
-    "access": null,
-    "description": null,
-    "lineNumber": 118,
     "undocument": true,
     "unknown": [
       {
@@ -3600,7 +4749,30 @@
     }
   },
   {
-    "__docId__": 135,
+    "__docId__": 177,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 88,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"editorOpened\": *, \"confirmingRemove\": *, \"loading\": boolean, \"data\": *, \"params\": *, \"nextOffset\": *, \"editData\": *, \"editId\": *, \"deleteId\": *, \"filterChanged\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 178,
     "kind": "member",
     "name": "resource",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3623,7 +4795,30 @@
     }
   },
   {
-    "__docId__": 136,
+    "__docId__": 179,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 122,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 180,
     "kind": "method",
     "name": "getChildContext",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3633,7 +4828,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#getChildContext",
     "access": null,
     "description": null,
-    "lineNumber": 130,
+    "lineNumber": 132,
     "undocument": true,
     "unknown": [
       {
@@ -3644,12 +4839,12 @@
     "params": [],
     "return": {
       "types": [
-        "{\"resource\": *, \"onEditorDidFinish\": *, \"editId\": *, \"editData\": *}"
+        "{\"resource\": *, \"onEditorDidFinish\": *, \"editId\": *, \"editData\": *, \"t\": *}"
       ]
     }
   },
   {
-    "__docId__": 137,
+    "__docId__": 181,
     "kind": "method",
     "name": "componentDidMount",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3659,7 +4854,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#componentDidMount",
     "access": null,
     "description": null,
-    "lineNumber": 139,
+    "lineNumber": 142,
     "undocument": true,
     "unknown": [
       {
@@ -3670,7 +4865,7 @@
     "params": []
   },
   {
-    "__docId__": 138,
+    "__docId__": 182,
     "kind": "method",
     "name": "componentWillReceiveProps",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3680,7 +4875,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#componentWillReceiveProps",
     "access": null,
     "description": null,
-    "lineNumber": 143,
+    "lineNumber": 146,
     "undocument": true,
     "unknown": [
       {
@@ -3698,7 +4893,7 @@
     ]
   },
   {
-    "__docId__": 139,
+    "__docId__": 183,
     "kind": "method",
     "name": "componentWillUnmount",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3708,7 +4903,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#componentWillUnmount",
     "access": null,
     "description": null,
-    "lineNumber": 149,
+    "lineNumber": 152,
     "undocument": true,
     "unknown": [
       {
@@ -3719,7 +4914,7 @@
     "params": []
   },
   {
-    "__docId__": 140,
+    "__docId__": 184,
     "kind": "method",
     "name": "onAjaxError",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3729,7 +4924,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onAjaxError",
     "access": null,
     "description": null,
-    "lineNumber": 153,
+    "lineNumber": 156,
     "undocument": true,
     "unknown": [
       {
@@ -3747,7 +4942,7 @@
     ]
   },
   {
-    "__docId__": 141,
+    "__docId__": 185,
     "kind": "method",
     "name": "onAjaxSuccess",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3757,7 +4952,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onAjaxSuccess",
     "access": null,
     "description": null,
-    "lineNumber": 163,
+    "lineNumber": 166,
     "undocument": true,
     "unknown": [
       {
@@ -3775,7 +4970,7 @@
     ]
   },
   {
-    "__docId__": 142,
+    "__docId__": 186,
     "kind": "method",
     "name": "onAddButtonClick",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3785,7 +4980,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onAddButtonClick",
     "access": null,
     "description": null,
-    "lineNumber": 176,
+    "lineNumber": 179,
     "undocument": true,
     "unknown": [
       {
@@ -3796,7 +4991,7 @@
     "params": []
   },
   {
-    "__docId__": 143,
+    "__docId__": 187,
     "kind": "method",
     "name": "onEditorDidFinish",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3806,7 +5001,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onEditorDidFinish",
     "access": null,
     "description": null,
-    "lineNumber": 180,
+    "lineNumber": 183,
     "undocument": true,
     "unknown": [
       {
@@ -3826,7 +5021,7 @@
     ]
   },
   {
-    "__docId__": 144,
+    "__docId__": 188,
     "kind": "method",
     "name": "onDeleteConfirmationFinished",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3836,7 +5031,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onDeleteConfirmationFinished",
     "access": null,
     "description": null,
-    "lineNumber": 187,
+    "lineNumber": 190,
     "undocument": true,
     "unknown": [
       {
@@ -3854,7 +5049,7 @@
     ]
   },
   {
-    "__docId__": 145,
+    "__docId__": 189,
     "kind": "method",
     "name": "onDeleteConfirmationClosed",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3864,7 +5059,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onDeleteConfirmationClosed",
     "access": null,
     "description": null,
-    "lineNumber": 194,
+    "lineNumber": 197,
     "undocument": true,
     "unknown": [
       {
@@ -3875,7 +5070,7 @@
     "params": []
   },
   {
-    "__docId__": 146,
+    "__docId__": 190,
     "kind": "method",
     "name": "onHeaderSubmit",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3885,7 +5080,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#onHeaderSubmit",
     "access": null,
     "description": null,
-    "lineNumber": 198,
+    "lineNumber": 201,
     "undocument": true,
     "unknown": [
       {
@@ -3903,7 +5098,7 @@
     ]
   },
   {
-    "__docId__": 147,
+    "__docId__": 191,
     "kind": "method",
     "name": "requestDataLoad",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3913,7 +5108,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#requestDataLoad",
     "access": null,
     "description": null,
-    "lineNumber": 203,
+    "lineNumber": 206,
     "undocument": true,
     "unknown": [
       {
@@ -3943,7 +5138,7 @@
     ]
   },
   {
-    "__docId__": 148,
+    "__docId__": 192,
     "kind": "method",
     "name": "loadData",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3953,7 +5148,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#loadData",
     "access": null,
     "description": null,
-    "lineNumber": 218,
+    "lineNumber": 221,
     "undocument": true,
     "unknown": [
       {
@@ -3983,7 +5178,7 @@
     ]
   },
   {
-    "__docId__": 149,
+    "__docId__": 193,
     "kind": "method",
     "name": "resetHeaderForm",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -3993,7 +5188,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#resetHeaderForm",
     "access": null,
     "description": null,
-    "lineNumber": 234,
+    "lineNumber": 247,
     "undocument": true,
     "unknown": [
       {
@@ -4004,7 +5199,7 @@
     "params": []
   },
   {
-    "__docId__": 150,
+    "__docId__": 194,
     "kind": "method",
     "name": "edit",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4014,7 +5209,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#edit",
     "access": null,
     "description": "Open editor with given item",
-    "lineNumber": 247,
+    "lineNumber": 260,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -4036,7 +5231,7 @@
     ]
   },
   {
-    "__docId__": 151,
+    "__docId__": 195,
     "kind": "method",
     "name": "delete",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4046,7 +5241,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#delete",
     "access": null,
     "description": "Open delete confirmation dialog",
-    "lineNumber": 271,
+    "lineNumber": 281,
     "unknown": [
       {
         "tagName": "@memberOf",
@@ -4068,7 +5263,7 @@
     ]
   },
   {
-    "__docId__": 152,
+    "__docId__": 196,
     "kind": "method",
     "name": "renderEditor",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4078,7 +5273,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#renderEditor",
     "access": null,
     "description": null,
-    "lineNumber": 276,
+    "lineNumber": 286,
     "undocument": true,
     "unknown": [
       {
@@ -4094,7 +5289,7 @@
     }
   },
   {
-    "__docId__": 153,
+    "__docId__": 197,
     "kind": "method",
     "name": "renderRemovalConfirmation",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4102,32 +5297,6 @@
     "async": false,
     "static": false,
     "longname": "src/components/TableEditor.jsx~TableEditor#renderRemovalConfirmation",
-    "access": null,
-    "description": null,
-    "lineNumber": 280,
-    "undocument": true,
-    "unknown": [
-      {
-        "tagName": "@_undocument",
-        "tagValue": ""
-      }
-    ],
-    "params": [],
-    "return": {
-      "types": [
-        "*"
-      ]
-    }
-  },
-  {
-    "__docId__": 154,
-    "kind": "method",
-    "name": "renderError",
-    "memberof": "src/components/TableEditor.jsx~TableEditor",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/components/TableEditor.jsx~TableEditor#renderError",
     "access": null,
     "description": null,
     "lineNumber": 290,
@@ -4146,7 +5315,33 @@
     }
   },
   {
-    "__docId__": 155,
+    "__docId__": 198,
+    "kind": "method",
+    "name": "renderError",
+    "memberof": "src/components/TableEditor.jsx~TableEditor",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/TableEditor.jsx~TableEditor#renderError",
+    "access": null,
+    "description": null,
+    "lineNumber": 300,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 199,
     "kind": "member",
     "name": "errorHandler",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4154,7 +5349,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#errorHandler",
     "access": null,
     "description": null,
-    "lineNumber": 293,
+    "lineNumber": 303,
     "undocument": true,
     "unknown": [
       {
@@ -4169,7 +5364,7 @@
     }
   },
   {
-    "__docId__": 156,
+    "__docId__": 200,
     "kind": "method",
     "name": "renderPaginator",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4179,7 +5374,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#renderPaginator",
     "access": null,
     "description": null,
-    "lineNumber": 301,
+    "lineNumber": 311,
     "undocument": true,
     "unknown": [
       {
@@ -4195,7 +5390,7 @@
     }
   },
   {
-    "__docId__": 157,
+    "__docId__": 201,
     "kind": "method",
     "name": "renderTable",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4205,7 +5400,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#renderTable",
     "access": null,
     "description": null,
-    "lineNumber": 312,
+    "lineNumber": 326,
     "undocument": true,
     "unknown": [
       {
@@ -4221,7 +5416,7 @@
     }
   },
   {
-    "__docId__": 158,
+    "__docId__": 202,
     "kind": "method",
     "name": "render",
     "memberof": "src/components/TableEditor.jsx~TableEditor",
@@ -4231,7 +5426,7 @@
     "longname": "src/components/TableEditor.jsx~TableEditor#render",
     "access": null,
     "description": null,
-    "lineNumber": 339,
+    "lineNumber": 353,
     "undocument": true,
     "unknown": [
       {
@@ -4247,7 +5442,7 @@
     }
   },
   {
-    "__docId__": 159,
+    "__docId__": 203,
     "kind": "file",
     "name": "src/components/TableEditorHeader.jsx",
     "content": "",
@@ -4258,7 +5453,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 160,
+    "__docId__": 204,
     "kind": "function",
     "name": "isEditor",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4271,7 +5466,7 @@
     "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
     "importStyle": null,
     "description": null,
-    "lineNumber": 8,
+    "lineNumber": 9,
     "undocument": true,
     "unknown": [
       {
@@ -4294,7 +5489,7 @@
     }
   },
   {
-    "__docId__": 161,
+    "__docId__": 205,
     "kind": "function",
     "name": "hasForm",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4307,7 +5502,7 @@
     "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
     "importStyle": null,
     "description": null,
-    "lineNumber": 14,
+    "lineNumber": 15,
     "undocument": true,
     "unknown": [
       {
@@ -4330,7 +5525,7 @@
     }
   },
   {
-    "__docId__": 162,
+    "__docId__": 206,
     "kind": "function",
     "name": "getFormChildren",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4343,7 +5538,7 @@
     "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
     "importStyle": "{getFormChildren}",
     "description": null,
-    "lineNumber": 29,
+    "lineNumber": 30,
     "undocument": true,
     "unknown": [
       {
@@ -4366,7 +5561,7 @@
     }
   },
   {
-    "__docId__": 163,
+    "__docId__": 207,
     "kind": "function",
     "name": "getHeaderChildren",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4379,7 +5574,7 @@
     "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
     "importStyle": null,
     "description": null,
-    "lineNumber": 44,
+    "lineNumber": 45,
     "undocument": true,
     "unknown": [
       {
@@ -4402,7 +5597,7 @@
     }
   },
   {
-    "__docId__": 164,
+    "__docId__": 208,
     "kind": "function",
     "name": "TableEditorHeader",
     "memberof": "src/components/TableEditorHeader.jsx",
@@ -4415,7 +5610,7 @@
     "importPath": "prg-editor/src/components/TableEditorHeader.jsx",
     "importStyle": "{TableEditorHeader}",
     "description": null,
-    "lineNumber": 60,
+    "lineNumber": 61,
     "undocument": true,
     "unknown": [
       {
@@ -4449,7 +5644,7 @@
     }
   },
   {
-    "__docId__": 165,
+    "__docId__": 209,
     "kind": "file",
     "name": "src/components/cells/ActionCell.jsx",
     "content": "",
@@ -4460,7 +5655,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 166,
+    "__docId__": 210,
     "kind": "variable",
     "name": "EMPTY_HREF",
     "memberof": "src/components/cells/ActionCell.jsx",
@@ -4471,7 +5666,7 @@
     "importPath": "prg-editor/src/components/cells/ActionCell.jsx",
     "importStyle": null,
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 8,
     "undocument": true,
     "unknown": [
       {
@@ -4486,7 +5681,7 @@
     }
   },
   {
-    "__docId__": 167,
+    "__docId__": 211,
     "kind": "function",
     "name": "ActionCell",
     "memberof": "src/components/cells/ActionCell.jsx",
@@ -4499,7 +5694,7 @@
     "importPath": "prg-editor/src/components/cells/ActionCell.jsx",
     "importStyle": "ActionCell",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 10,
     "undocument": true,
     "unknown": [
       {
@@ -4527,7 +5722,208 @@
     }
   },
   {
-    "__docId__": 168,
+    "__docId__": 212,
+    "kind": "file",
+    "name": "src/components/cells/RelationCell.jsx",
+    "content": "",
+    "static": true,
+    "longname": "src/components/cells/RelationCell.jsx",
+    "access": null,
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 213,
+    "kind": "class",
+    "name": "RelationCell",
+    "memberof": "src/components/cells/RelationCell.jsx",
+    "static": true,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell",
+    "access": null,
+    "export": true,
+    "importPath": "prg-editor/src/components/cells/RelationCell.jsx",
+    "importStyle": "RelationCell",
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "interface": false,
+    "extends": [
+      "react~Component"
+    ]
+  },
+  {
+    "__docId__": 214,
+    "kind": "constructor",
+    "name": "constructor",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#constructor",
+    "access": null,
+    "description": null,
+    "lineNumber": 10,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [
+      {
+        "name": "props",
+        "types": [
+          "*"
+        ]
+      }
+    ]
+  },
+  {
+    "__docId__": 215,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 13,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 216,
+    "kind": "member",
+    "name": "state",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#state",
+    "access": null,
+    "description": null,
+    "lineNumber": 15,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "{\"isLoading\": boolean, \"error\": *, \"value\": *}"
+      ]
+    }
+  },
+  {
+    "__docId__": 217,
+    "kind": "method",
+    "name": "componentDidMount",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#componentDidMount",
+    "access": null,
+    "description": null,
+    "lineNumber": 22,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 218,
+    "kind": "method",
+    "name": "componentWillUnmount",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#componentWillUnmount",
+    "access": null,
+    "description": null,
+    "lineNumber": 41,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": []
+  },
+  {
+    "__docId__": 219,
+    "kind": "member",
+    "name": "resource",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#resource",
+    "access": null,
+    "description": null,
+    "lineNumber": 43,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "type": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 220,
+    "kind": "method",
+    "name": "render",
+    "memberof": "src/components/cells/RelationCell.jsx~RelationCell",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/components/cells/RelationCell.jsx~RelationCell#render",
+    "access": null,
+    "description": null,
+    "lineNumber": 46,
+    "undocument": true,
+    "unknown": [
+      {
+        "tagName": "@_undocument",
+        "tagValue": ""
+      }
+    ],
+    "params": [],
+    "return": {
+      "types": [
+        "*"
+      ]
+    }
+  },
+  {
+    "__docId__": 221,
     "kind": "file",
     "name": "src/components/cells/TextCell.jsx",
     "content": "",
@@ -4538,7 +5934,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 169,
+    "__docId__": 222,
     "kind": "function",
     "name": "TextCell",
     "memberof": "src/components/cells/TextCell.jsx",
@@ -4551,7 +5947,7 @@
     "importPath": "prg-editor/src/components/cells/TextCell.jsx",
     "importStyle": "TextCell",
     "description": null,
-    "lineNumber": 7,
+    "lineNumber": 8,
     "undocument": true,
     "unknown": [
       {
@@ -4579,7 +5975,7 @@
     }
   },
   {
-    "__docId__": 170,
+    "__docId__": 223,
     "kind": "file",
     "name": "src/components/tablePropTypes.js",
     "content": "",
@@ -4590,7 +5986,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 171,
+    "__docId__": 224,
     "kind": "variable",
     "name": "ColsConfig",
     "memberof": "src/components/tablePropTypes.js",
@@ -4616,7 +6012,7 @@
     }
   },
   {
-    "__docId__": 172,
+    "__docId__": 225,
     "kind": "variable",
     "name": "StringOrFunc",
     "memberof": "src/components/tablePropTypes.js",
@@ -4642,7 +6038,7 @@
     }
   },
   {
-    "__docId__": 173,
+    "__docId__": 226,
     "kind": "file",
     "name": "src/main.js",
     "content": "",
@@ -4653,7 +6049,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 174,
+    "__docId__": 227,
     "kind": "file",
     "name": "src/resourceUrlBuilder.js",
     "content": "",
@@ -4664,7 +6060,7 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 175,
+    "__docId__": 228,
     "kind": "variable",
     "name": "ID_PLACEHOLDER",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4690,7 +6086,7 @@
     }
   },
   {
-    "__docId__": 176,
+    "__docId__": 229,
     "kind": "variable",
     "name": "LAST_SLASH",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4716,7 +6112,7 @@
     }
   },
   {
-    "__docId__": 177,
+    "__docId__": 230,
     "kind": "function",
     "name": "appendQuery",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4758,7 +6154,7 @@
     }
   },
   {
-    "__docId__": 178,
+    "__docId__": 231,
     "kind": "function",
     "name": "resourceUrl",
     "memberof": "src/resourceUrlBuilder.js",
@@ -4803,7 +6199,7 @@
     }
   },
   {
-    "__docId__": 179,
+    "__docId__": 232,
     "kind": "function",
     "name": "findAll",
     "memberof": "src/resourceUrlBuilder.js",
