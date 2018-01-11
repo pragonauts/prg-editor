@@ -25,7 +25,7 @@ import PropTypes from 'prop-types';
  * // basic usage
  * <Modal
  *     title="Alert"
- *     onClose={() => console.log('please close me')}
+ *     onClosed={() => console.log('please close me')}
  * >
  *      <p className="title">Something Interesting!</p>
  * </Modal>
@@ -34,7 +34,7 @@ import PropTypes from 'prop-types';
  * // providing own body
  * <Modal
  *     title="Alert"
- *     onClose={() => console.log('please close me')}
+ *     onClosed={() => console.log('please close me')}
  *     customBody
  * >
  *      <form>

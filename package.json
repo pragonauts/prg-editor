@@ -70,7 +70,7 @@
     "mocha": "^3.4.1",
     "mocha-istanbul": "^0.3.0",
     "prop-types": "^15.5.10",
-    "prg-form": "^0.5.1",
+    "prg-form": "^0.5.2",
     "react": "^15.5.4",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
@@ -80,6 +80,6 @@
   },
   "peerDependencies": {
     "jquery": "^3.1.1",
-    "prg-form": "^0.5.1"
+    "prg-form": "^0.5.2"
   }
 }

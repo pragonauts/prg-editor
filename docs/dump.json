@@ -4262,7 +4262,7 @@
     "importStyle": "Modal",
     "description": "Simple Bulma Modal window\n\n## PropTypes\n\n| prop | type | purpose |\n|------|------|---------|\n| `onClosed` | `function` - **required** | Called, when user presses close\n| `title` | `string|react` - **required** | Is shown as title\n| `footer` | `string|react` | Is used as footer when `customBody === false`\n| `customBody` | `boolean` | Enable to use own body and footer components (usefull for forms)",
     "examples": [
-      "import { Modal } from 'prg-editor';\n\n// basic usage\n<Modal\n    title=\"Alert\"\n    onClose={() => console.log('please close me')}\n>\n     <p className=\"title\">Something Interesting!</p>\n</Modal>\n\n\n// providing own body\n<Modal\n    title=\"Alert\"\n    onClose={() => console.log('please close me')}\n    customBody\n>\n     <form>\n         <section className=\"modal-card-body\">\n             <input name=\"input\" />\n         </section>\n         <footer className=\"modal-card-foot\">\n             <button>Submit</button>\n         </footer>\n     </form>\n</Modal>"
+      "import { Modal } from 'prg-editor';\n\n// basic usage\n<Modal\n    title=\"Alert\"\n    onClosed={() => console.log('please close me')}\n>\n     <p className=\"title\">Something Interesting!</p>\n</Modal>\n\n\n// providing own body\n<Modal\n    title=\"Alert\"\n    onClosed={() => console.log('please close me')}\n    customBody\n>\n     <form>\n         <section className=\"modal-card-body\">\n             <input name=\"input\" />\n         </section>\n         <footer className=\"modal-card-foot\">\n             <button>Submit</button>\n         </footer>\n     </form>\n</Modal>"
     ],
     "lineNumber": 51,
     "unknown": [
